@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="spitGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#C83E2B" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#121214" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="meatGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8D230F"/>
+      <stop offset="30%" stop-color="#C83E2B"/>
+      <stop offset="70%" stop-color="#E5A93B"/>
+      <stop offset="100%" stop-color="#701A0B"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1A1A20"/>
+  <circle cx="400" cy="300" r="280" fill="url(#spitGlow)"/>
+  
+  <!-- Fire Base & Ember Rays -->
+  <path d="M 200 480 Q 400 420 600 480 L 650 550 L 150 550 Z" fill="#292933"/>
+  <circle cx="350" cy="500" r="12" fill="#FF4500" opacity="0.9"/>
+  <circle cx="450" cy="510" r="16" fill="#FF8C00" opacity="0.8"/>
+  <circle cx="400" cy="490" r="20" fill="#FFA500" opacity="0.95"/>
+  
+  <!-- Vertical Spit Tower -->
+  <rect x="392" y="50" width="16" height="480" fill="#B0B0C0" rx="4"/>
+  
+  <!-- Layered Stack of Roasted Meat -->
+  <path d="M 280 120 C 280 100, 520 100, 520 120 L 540 400 C 540 440, 260 440, 260 400 Z" fill="url(#meatGrad)"/>
+  
+  <!-- Grill Sear Lines -->
+  <path d="M 300 150 Q 400 180 500 150" stroke="#4A1006" stroke-width="6" fill="none"/>
+  <path d="M 290 200 Q 400 230 510 200" stroke="#4A1006" stroke-width="6" fill="none"/>
+  <path d="M 280 250 Q 400 280 520 250" stroke="#4A1006" stroke-width="6" fill="none"/>
+  <path d="M 275 300 Q 400 330 525 300" stroke="#4A1006" stroke-width="6" fill="none"/>
+  <path d="M 270 350 Q 400 380 530 350" stroke="#4A1006" stroke-width="6" fill="none"/>
+
+  <!-- Smoke Steam -->
+  <path d="M 330 110 Q 300 60 350 20" stroke="rgba(255,255,255,0.3)" stroke-width="4" fill="none"/>
+  <path d="M 400 100 Q 430 50 390 15" stroke="rgba(255,255,255,0.4)" stroke-width="6" fill="none"/>
+  <path d="M 470 110 Q 500 60 450 20" stroke="rgba(255,255,255,0.3)" stroke-width="4" fill="none"/>
+
+  <!-- Decorative Badge Overlay -->
+  <rect x="50" y="50" width="180" height="44" rx="22" fill="#E5A93B"/>
+  <text x="140" y="77" font-family="'Outfit', sans-serif" font-weight="800" font-size="14" fill="#121214" text-anchor="middle">🔥 SLOW-ROASTED DAILY</text>
+</svg>

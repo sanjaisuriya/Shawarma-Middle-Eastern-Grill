@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Reservations | Shawarma &amp; Middle Eastern Grill</title>
+  <meta name="description" content="Contact Shawarma &amp; Middle Eastern Grill. Table reservations, takeout inquiries, catering requests, restaurant hours, map directions, and customer support.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand me-auto me-lg-3" href="index.html">
+        <img src="assets/images/logo/logo-dark.svg" alt="Shawarma &amp; Middle Eastern Grill" class="navbar-brand-logo theme-logo-light" onerror="this.onerror=null; this.src='assets/images/logo/logo-dark.svg';">
+      </a>
+
+      <!-- Icon-Only Control Buttons & Action Group -->
+      <div class="header-actions-group order-lg-last">
+        <div class="header-icon-group">
+          <!-- Theme Toggle Icon Button -->
+          <button class="header-icon-btn theme-toggle-btn" aria-label="Switch to Dark Mode" title="Toggle dark/light theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- RTL Icon Button -->
+          <button class="header-icon-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL) layout" title="Switch to RTL">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="direction-icon">
+              <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm11.146-7.854a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H9.5a.5.5 0 0 1 0-1h4.793l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </button>
+
+          <!-- Cart Icon Button -->
+          <a href="menu.html" class="header-icon-btn cart-btn" aria-label="View Shopping Cart (2 items)" title="Shopping Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <span class="cart-badge">2</span>
+          </a>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <a href="menu.html" class="btn btn-spice d-none d-sm-inline-flex">Order Online</a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-lg-3 me-lg-0 mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home Pages</a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home 1 – Restaurant Landing</a></li>
+              <li><a class="dropdown-item" href="home-catering.html">Home 2 – Grill &amp; Catering Landing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="menu.html" class="btn btn-spice d-sm-none w-100 mt-2">Order Online</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner: Contact & Reservations -->
+  <section class="page-banner page-banner-contact">
+    <div class="container">
+      <div class="max-w-700 mx-auto text-center">
+        <span class="hero-badge mb-3">📞 We're Delighted to Welcome You</span>
+        <h1 class="display-4 font-heading text-white mb-3">Contact &amp; Reservations</h1>
+        <p class="lead text-light opacity-90 mb-4">Whether reserving a table, ordering takeout, planning a family celebration, or arranging event catering, our team welcomes you with Levant warmth.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#contactFormSection" class="btn btn-spice" data-select-enquiry="reservation">Book a Table &amp; Enquire</a>
+          <a href="tel:18005550199" class="btn btn-outline-gold text-white border-white">Call (800) 555-0199</a>
+          <a href="#mapSection" class="btn btn-outline-gold text-white border-white">Map &amp; Directions</a>
+        </div>
+        <div class="breadcrumb-custom mt-4">
+          <a href="index.html">Home</a> &bull; <span>Contact &amp; Reservations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Details Section: Address, Phone, Email & Hours -->
+  <section class="py-5 bg-surface">
+    <div class="container py-2">
+      <div class="text-center mb-4">
+        <span class="section-subtitle">Reach Out to Our Team</span>
+        <h2 class="section-title">Direct Restaurant Contacts</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">Below are our verified restaurant contact details. All sample information is clearly indicated and easy to replace for your business.</p>
+      </div>
+
+      <div class="row g-4 mb-2">
+        <!-- 1. Address Card (Sample Detail) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card p-4 rounded-4 contact-detail-card h-100 text-center">
+            <!-- SAMPLE ADDRESS: Replace with your actual restaurant address -->
+            <div class="contact-detail-icon">📍</div>
+            <span class="sample-badge-tag">Sample Detail &bull; Editable</span>
+            <h4 class="font-heading fs-5 mb-2">Visit Our Grill</h4>
+            <p class="text-muted small mb-1">
+              <strong>124 Spice Market Way</strong><br>
+              Foodville, CA 90210
+            </p>
+            <p class="text-muted small mb-3">Corner of Cedar Ave &amp; Spice Market Way</p>
+            <div class="mt-auto">
+              <a href="#mapSection" class="btn btn-outline-spice btn-sm w-100">View On Map &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Phone Card (Sample Detail) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card p-4 rounded-4 contact-detail-card h-100 text-center">
+            <!-- SAMPLE PHONE: Replace with your actual phone numbers -->
+            <div class="contact-detail-icon">📞</div>
+            <span class="sample-badge-tag">Sample Detail &bull; Editable</span>
+            <h4 class="font-heading fs-5 mb-2">Call &amp; Ordering</h4>
+            <p class="text-muted small mb-1">
+              Main Desk: <a href="tel:18005550199" class="text-heading fw-semibold text-decoration-none">(800) 555-0199</a><br>
+              Takeout: <a href="tel:18005550192" class="text-heading fw-semibold text-decoration-none">(800) 555-0192</a>
+            </p>
+            <p class="text-muted small mb-3">Catering Line: <a href="tel:18005550198" class="text-heading fw-semibold text-decoration-none">(800) 555-0198</a></p>
+            <div class="mt-auto">
+              <a href="tel:18005550199" class="btn btn-outline-spice btn-sm w-100">Call Main Line &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Email Card (Sample Detail) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card p-4 rounded-4 contact-detail-card h-100 text-center">
+            <!-- SAMPLE EMAIL: Replace with your actual email addresses -->
+            <div class="contact-detail-icon">✉️</div>
+            <span class="sample-badge-tag">Sample Detail &bull; Editable</span>
+            <h4 class="font-heading fs-5 mb-2">Email Inquiries</h4>
+            <p class="text-muted small mb-1">
+              General: <a href="mailto:hello@shawarmagrill.com" class="text-heading text-decoration-none">hello@shawarmagrill.com</a><br>
+              Bookings: <a href="mailto:tables@shawarmagrill.com" class="text-heading text-decoration-none">tables@shawarmagrill.com</a>
+            </p>
+            <p class="text-muted small mb-3">Events: <a href="mailto:catering@shawarmagrill.com" class="text-heading text-decoration-none">catering@shawarmagrill.com</a></p>
+            <div class="mt-auto">
+              <a href="mailto:hello@shawarmagrill.com" class="btn btn-outline-spice btn-sm w-100">Email Us &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Hours Card (Sample Detail) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card p-4 rounded-4 contact-detail-card h-100 text-center">
+            <!-- SAMPLE HOURS: Replace with your actual restaurant hours -->
+            <div class="contact-detail-icon">🕒</div>
+            <span class="sample-badge-tag">Sample Detail &bull; Editable</span>
+            <h4 class="font-heading fs-5 mb-2">Opening Hours</h4>
+            <p class="text-muted small mb-1">
+              <strong>Mon – Thu:</strong> 11:00 AM – 10:00 PM<br>
+              <strong>Fri – Sat:</strong> 11:00 AM – 11:30 PM<br>
+              <strong>Sunday:</strong> 12:00 PM – 10:00 PM
+            </p>
+            <span class="badge bg-success-subtle text-success border border-success-subtle mt-1 small">Kitchen Closes 30m Prior</span>
+            <div class="mt-auto pt-2">
+              <a href="#contactFormSection" class="btn btn-outline-spice btn-sm w-100" data-select-enquiry="reservation">Reserve Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Form, Reservation Guidance & Catering Highlight -->
+  <section class="py-5 bg-surface-alt" id="contactFormSection">
+    <div class="container py-2">
+      <div class="row g-5">
+        
+        <!-- Left Column: Contact & Order Enquiry Form -->
+        <div class="col-lg-7">
+          <div class="card p-4 p-md-5 border border-color rounded-4 bg-card shadow-sm h-100">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+              <span class="badge bg-spice-subtle text-spice border border-spice-subtle px-3 py-1 rounded-pill small font-medium">💬 Quick Response Form</span>
+              <span class="text-muted small">Replies typically within 2–4 hours</span>
+            </div>
+            
+            <h3 class="font-heading mb-2">Send an Enquiry or Booking Request</h3>
+            <p class="text-muted mb-4 small">Whether you have questions about our menu, need to request a table reservation, ask about a takeout order, or plan private event catering, we’re ready to assist.</p>
+
+            <!-- Front-End Confirmation Message Alert -->
+            <div id="contactSuccessAlert" class="form-alert-success" role="alert" style="display: none;">
+              <div class="d-flex align-items-start gap-3">
+                <span class="fs-2 text-success lh-1">✓</span>
+                <div>
+                  <h5 class="fw-bold mb-1 text-success">✓ Enquiry &amp; Reservation Request Received!</h5>
+                  <p class="mb-2">Thank you! Your enquiry or table reservation request has been received. Our dining room host and catering team will review your details and confirm shortly.</p>
+                  <div class="p-2 rounded bg-surface border border-color small mb-2">
+                    <strong>Reference Number:</strong> <span id="demoConfId" class="text-spice fw-semibold">SG-2026-8941</span> &bull; 
+                    <strong>Estimated Response:</strong> Within 2 to 4 hours
+                  </div>
+                  <p class="small mb-0 text-muted">
+                    Need immediate same-day seating or urgent order assistance within the next 2 hours? Please call our host desk directly at <strong>(800) 555-0199</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                
+                <!-- Full Name -->
+                <div class="col-md-6">
+                  <label for="cntName" class="form-label-custom">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control form-control-custom name-input" id="cntName" name="name" required placeholder="e.g. Tariq Mansour" autocomplete="name">
+                  <div class="invalid-feedback-custom" id="cntNameFeedback">Please enter a valid name using letters and spaces only (no numbers).</div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="col-md-6">
+                  <label for="cntEmail" class="form-label-custom">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control form-control-custom" id="cntEmail" name="email" required placeholder="e.g. tariq@example.com" autocomplete="email">
+                  <div class="invalid-feedback-custom">Please enter a valid email address.</div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="col-md-6">
+                  <label for="cntPhone" class="form-label-custom">Phone Number <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control form-control-custom phone-input" id="cntPhone" name="phone" inputmode="numeric" pattern="[0-9]+" required placeholder="e.g. 8005550199" autocomplete="tel">
+                  <div class="invalid-feedback-custom">Please enter a valid phone number with digits only (no letters or special characters).</div>
+                </div>
+
+                <!-- Enquiry Type -->
+                <div class="col-md-6">
+                  <label for="cntEnquiryType" class="form-label-custom">Enquiry Type <span class="text-danger">*</span></label>
+                  <select class="form-select form-control-custom" id="cntEnquiryType" name="enquiry_type" required>
+                    <option value="" disabled selected>-- Select an Enquiry Type --</option>
+                    <option value="general">💬 General Questions &amp; Feedback</option>
+                    <option value="reservation">🍽️ Table Reservation Request</option>
+                    <option value="order">📦 Order Enquiry (Takeout / Delivery)</option>
+                    <option value="catering">🍢 Private Dining &amp; Catering Inquiry</option>
+                  </select>
+                  <div class="invalid-feedback-custom">Please select an enquiry type.</div>
+                </div>
+
+                <!-- Preferred Date & Time (Optional for bookings) -->
+                <div class="col-md-6">
+                  <label for="cntDateTime" class="form-label-custom">Preferred Date &amp; Time <span class="text-muted fw-normal small">(For bookings/orders)</span></label>
+                  <input type="datetime-local" class="form-control form-control-custom" id="cntDateTime" name="date_time">
+                </div>
+
+                <!-- Party Size / Guest Count -->
+                <div class="col-md-6">
+                  <label for="cntGuests" class="form-label-custom">Party Size / Guests</label>
+                  <select class="form-select form-control-custom" id="cntGuests" name="guests">
+                    <option value="not_applicable">Not Applicable (General / Order)</option>
+                    <option value="1_2">1 – 2 Guests</option>
+                    <option value="3_5" selected>3 – 5 Guests (Standard Table)</option>
+                    <option value="6_10">6 – 10 Guests (Large Group)</option>
+                    <option value="10_plus">10+ Guests (Private Dining / Banquet)</option>
+                  </select>
+                </div>
+
+                <!-- Message Field -->
+                <div class="col-12">
+                  <label for="cntMessage" class="form-label-custom">Message &amp; Special Requests <span class="text-danger">*</span></label>
+                  <textarea class="form-control form-control-custom" id="cntMessage" name="message" rows="4" required placeholder="Tell us how we can assist you. For reservations, mention indoor booth or patio preference. For food preparation, note Halal certification, vegan preferences, or specific allergies..."></textarea>
+                  <div class="invalid-feedback-custom">Please enter your message or request details.</div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 mt-4">
+                  <button type="submit" id="cntSubmitBtn" class="btn btn-spice btn-lg w-100 py-3 font-medium d-flex align-items-center justify-content-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm-.78-.78L1.59 6.53l11.832-4.733L5.856 9.29Z"/>
+                    </svg>
+                    Send Enquiry &amp; Reservation Request
+                  </button>
+                  <p class="text-muted small text-center mt-2 mb-0">🔒 Front-End Demo: Submitting triggers an instant interactive confirmation without requiring an active backend.</p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Column: Reservation Guidance & Catering Highlight -->
+        <div class="col-lg-5">
+          <div class="d-flex flex-column gap-4 h-100">
+
+            <!-- 1. Reservation Guidance Card -->
+            <div class="card p-4 border border-color rounded-4 bg-card shadow-sm">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="fs-4">📋</span>
+                <h4 class="font-heading mb-0 fs-5">Table Reservation Guidance</h4>
+              </div>
+              
+              <div class="mb-3 pb-3 border-bottom border-color">
+                <div class="d-flex align-items-start gap-2">
+                  <span class="text-gold fw-bold">✓</span>
+                  <div>
+                    <strong class="text-heading d-block small">Walk-ins Welcome</strong>
+                    <p class="text-muted small mb-0">Parties of up to 4 guests are warmly welcomed without a prior booking. Typical evening wait time is under 15 minutes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 pb-3 border-bottom border-color">
+                <div class="d-flex align-items-start gap-2">
+                  <span class="text-gold fw-bold">✓</span>
+                  <div>
+                    <strong class="text-heading d-block small">Standard Bookings (1 – 5 Guests)</strong>
+                    <p class="text-muted small mb-0">Reserve online via this form or by phone up to 2 hours in advance to guarantee your preferred indoor booth or heated patio table.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Large Group Reservation Guidance -->
+              <div class="p-3 rounded-3 bg-surface border border-warning-subtle mb-3">
+                <div class="d-flex align-items-start gap-2">
+                  <span class="fs-5">👨‍👩‍👧‍👦</span>
+                  <div>
+                    <strong class="text-heading d-block small">Enquiring for Larger Groups (6+ Guests)?</strong>
+                    <p class="text-muted small mb-2">To ensure adjacent seating in our banquet room or spacious family booth alcove, large parties must book <strong>24–48 hours in advance</strong>.</p>
+                    <p class="small mb-0">
+                      Please call our reservations desk directly at <a href="tel:18005550199" class="fw-bold text-spice text-decoration-none">(800) 555-0199</a> or select <strong>"Table Reservation"</strong> with <strong>6+ Guests</strong> in the form.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="d-flex align-items-start gap-2">
+                  <span class="text-gold fw-bold">✓</span>
+                  <div>
+                    <strong class="text-heading d-block small">100% Halal &amp; Dietary Confidence</strong>
+                    <p class="text-muted small mb-0">All chicken, lamb, and beef are certified Halal. Dedicated vegan (falafel, hummus, tabbouleh) and gluten-free platters are prepared at dedicated stations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Catering Enquiries Highlight Card -->
+            <div class="catering-highlight-box p-4 shadow-sm mt-auto">
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                <span class="badge bg-gold text-dark fw-bold px-3 py-1 rounded-pill small">🍢 Catering Services</span>
+                <span class="badge bg-spice text-white px-2 py-1 small">15 to 500+ Guests</span>
+              </div>
+
+              <h4 class="font-heading fs-5 mb-2">Planning an Event or Large Gathering?</h4>
+              <p class="text-muted small mb-3">
+                Bring our authentic live charcoal grills, sizzling vertical spit-roast stations, and vibrant mezze feast platters to your wedding, office party, or family festival.
+              </p>
+
+              <ul class="list-unstyled small text-muted mb-3 d-flex flex-column gap-1">
+                <li class="d-flex align-items-center gap-2">
+                  <span class="text-success fw-bold">✓</span> Customizable menus tailored to your guests &amp; budget
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <span class="text-success fw-bold">✓</span> Warm saj flatbreads, garlic toum, tahini &amp; chaffers included
+                </li>
+                <li class="d-flex align-items-center gap-2">
+                  <span class="text-success fw-bold">✓</span> Full-service live chefs or prompt drop-off buffet setup
+                </li>
+              </ul>
+
+              <div class="d-flex flex-column gap-2">
+                <a href="catering.html" class="btn btn-gold w-100 font-medium">Explore Catering Packages &amp; Menu &rarr;</a>
+                <a href="tel:18005550198" class="btn btn-outline-spice btn-sm w-100">Direct Catering Desk: (800) 555-0198</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map, Directions & Parking Information -->
+  <section class="py-5 bg-surface" id="mapSection">
+    <div class="container py-2">
+      <div class="text-center mb-4">
+        <span class="section-subtitle">Find Our Restaurant</span>
+        <h2 class="section-title">Location, Directions &amp; Parking</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">Conveniently located in Foodville's Culinary Arts District. Explore our interactive location map, simple driving directions, transit lines, and customer parking details.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        
+        <!-- Left Column: Interactive Map Embed -->
+        <div class="col-lg-6">
+          <div class="card border border-color rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+            <!-- Map Top Bar -->
+            <div class="bg-surface-alt p-3 p-sm-4 border-bottom border-color d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2">
+              <div>
+                <h4 class="font-heading mb-1 fs-5">Shawarma &amp; Middle Eastern Grill</h4>
+                <p class="text-muted small mb-0">📍 124 Spice Market Way, Foodville, CA 90210</p>
+              </div>
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=124+Spice+Market+Way,+Foodville,+CA+90210" target="_blank" rel="noopener noreferrer" class="btn btn-spice btn-sm text-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Get Driving Directions
+              </a>
+            </div>
+
+            <!-- Map Iframe Frame -->
+            <div class="w-100 flex-grow-1 position-relative bg-body-tertiary" style="min-height: 380px;">
+              <iframe 
+                src="https://maps.google.com/maps?q=124+Spice+Market+Way,+Foodville,+CA+90210&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0; min-height: 380px; display: block;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" 
+                title="Shawarma &amp; Middle Eastern Grill Location Map">
+              </iframe>
+            </div>
+
+            <!-- Map Bottom Feature Bar -->
+            <div class="bg-surface-alt p-3 text-center border-top border-color">
+              <small class="text-muted">
+                🚗 Free 40-Stall Customer Parking &bull; ♿ Zero-Step Ramped Entry &bull; 🪑 Heated Outdoor Patio Dining
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Brief Directions & Parking Details -->
+        <div class="col-lg-6">
+          <div class="card p-4 p-sm-4 border border-color rounded-4 bg-card shadow-sm h-100 d-flex flex-column justify-content-between">
+            <h4 class="font-heading fs-5 mb-3">Getting Here &amp; Parking Information</h4>
+
+            <!-- Driving Directions -->
+            <div class="parking-info-item">
+              <span class="fs-4">🚗</span>
+              <div>
+                <strong class="text-heading d-block small">Driving Directions</strong>
+                <p class="text-muted small mb-0">From Highway 101, take Exit 24B (Downtown/Arts District). Head east along Grand Avenue for 1.2 miles, then turn right onto Spice Market Way. Our restaurant is located at the corner of Cedar Avenue.</p>
+              </div>
+            </div>
+
+            <!-- Parking Guidance -->
+            <div class="parking-info-item">
+              <span class="fs-4">🅿️</span>
+              <div>
+                <strong class="text-heading d-block small">Complimentary Customer Parking Lot</strong>
+                <p class="text-muted small mb-0">We offer a private, well-lit 40-space customer parking lot directly behind the restaurant. Enter easily through Spice Alley at the rear.</p>
+              </div>
+            </div>
+
+            <!-- Weekend Valet -->
+            <div class="parking-info-item">
+              <span class="fs-4">🚘</span>
+              <div>
+                <strong class="text-heading d-block small">Weekend Valet Parking</strong>
+                <p class="text-muted small mb-0">Complimentary valet service is available for dine-in guests every Friday and Saturday evening from 6:00 PM to 11:30 PM.</p>
+              </div>
+            </div>
+
+            <!-- Public Transit -->
+            <div class="parking-info-item">
+              <span class="fs-4">🚇</span>
+              <div>
+                <strong class="text-heading d-block small">Public Transit &amp; Metro Access</strong>
+                <p class="text-muted small mb-0">Central Metro Station (Gold &amp; Blue Lines) is just a 4-minute walk (0.2 miles). Bus lines #14, #28, and #42 stop directly at the Spice Market Plaza crosswalk.</p>
+              </div>
+            </div>
+
+            <!-- Wheelchair Accessibility -->
+            <div class="parking-info-item">
+              <span class="fs-4">♿</span>
+              <div>
+                <strong class="text-heading d-block small">ADA Accessibility &amp; Special Needs</strong>
+                <p class="text-muted small mb-0">Level zero-step main entrance with automatic doors, wide aisles, fully accessible restrooms, and 4 dedicated accessible parking bays adjacent to the front doors.</p>
+              </div>
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="pt-3 mt-2 d-flex flex-wrap gap-2">
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=124+Spice+Market+Way,+Foodville,+CA+90210" target="_blank" rel="noopener noreferrer" class="btn btn-spice btn-sm">Open in Google Maps</a>
+              <a href="tel:18005550199" class="btn btn-outline-spice btn-sm">Need Help Finding Us? Call Desk</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media & Culinary Community -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container py-2">
+      <div class="text-center mb-4">
+        <span class="section-subtitle">Join Our Culinary Family</span>
+        <h2 class="section-title">Follow Us on Social Media</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">Catch daily vertical spit roasting, chef tutorials, secret off-menu items, and community feast highlights across our official channels.</p>
+      </div>
+
+      <div class="row g-3 g-md-4 mb-4">
+        <!-- Instagram -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="https://instagram.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-media-tile">
+            <div class="social-tile-icon">📸</div>
+            <strong class="text-heading d-block small mb-1">Instagram</strong>
+            <span class="text-spice small fw-semibold">@shawarmagrill</span>
+            <span class="text-muted small mt-1">Daily Spit Roasts &amp; Stories</span>
+          </a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="https://facebook.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-media-tile">
+            <div class="social-tile-icon">👥</div>
+            <strong class="text-heading d-block small mb-1">Facebook</strong>
+            <span class="text-spice small fw-semibold">/shawarmagrill</span>
+            <span class="text-muted small mt-1">Events &amp; Community Reviews</span>
+          </a>
+        </div>
+
+        <!-- TikTok -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="https://tiktok.com/@shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-media-tile">
+            <div class="social-tile-icon">🎵</div>
+            <strong class="text-heading d-block small mb-1">TikTok</strong>
+            <span class="text-spice small fw-semibold">@shawarmagrill</span>
+            <span class="text-muted small mt-1">Sauce Drizzles &amp; Slices</span>
+          </a>
+        </div>
+
+        <!-- X (Twitter) -->
+        <div class="col-6 col-md-4 col-lg">
+          <a href="https://x.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-media-tile">
+            <div class="social-tile-icon">🐦</div>
+            <strong class="text-heading d-block small mb-1">X (Twitter)</strong>
+            <span class="text-spice small fw-semibold">@shawarmagrill</span>
+            <span class="text-muted small mt-1">Live Updates &amp; Flash Specials</span>
+          </a>
+        </div>
+
+        <!-- YouTube -->
+        <div class="col-12 col-md-4 col-lg">
+          <a href="https://youtube.com/@shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-media-tile">
+            <div class="social-tile-icon">▶️</div>
+            <strong class="text-heading d-block small mb-1">YouTube</strong>
+            <span class="text-spice small fw-semibold">@shawarmagrill</span>
+            <span class="text-muted small mt-1">Recipes &amp; Grilling Masters</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Community Tag Callout Banner -->
+      <div class="p-3 p-md-4 rounded-4 bg-card border border-color text-center shadow-sm max-w-700 mx-auto">
+        <p class="mb-0 small text-muted">
+          Tag <strong class="text-spice">#ShawarmaAndGrill</strong> on your dining photos and reels for a chance to be featured on our restaurant screen and receive a complimentary house dessert!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <img src="assets/images/logo/logo-light.svg" alt="Shawarma &amp; Grill Logo" class="mb-3" style="height: 48px;" onerror="this.onerror=null; this.src='assets/images/logo/logo-light.svg';">
+          <p class="small">Authentic Middle Eastern cuisine crafted with passion, hand-ground spices, and slow charcoal fire. Certified 100% Halal.</p>
+          <div class="footer-social-links mt-3">
+            <a href="https://instagram.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.944-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.271 1.229a4.008 4.008 0 1 0 0 8.016 4.008 4.008 0 0 0 0-8.016zm0 1.442a2.566 2.566 0 1 1 0 5.132 2.566 2.566 0 0 1 0-5.132z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on X (Twitter)" title="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M12.6 0h2.454l-5.36 6.126L16 16h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.554L0 0h5.063l3.495 4.633L12.601 0zm-.86 14.538h1.36L4.323 1.394H2.864l8.876 13.144z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com/@shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe to our YouTube channel" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022 1.082.006.544c0 .272.002.544.002.816s-.002.544-.002.816l-.006.544-.022 1.082-.01.104c-.048.519-.119 1.023-.22 1.402a2.007 2.007 0 0 1-1.415 1.42c-1.123.302-5.288.332-6.11.335h-.163c-.822-.003-4.987-.033-6.11-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.883-.22-1.402l-.01-.104-.022-1.082-.006-.544C0 9.073 0 8.801 0 8.529s.002-.544.002-.816l.006-.544.022-1.082.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c1.123-.302 5.288-.332 6.11-.335zM6.1 5.485v6.03l5.228-3.015L6.1 5.485z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="catering.html">Catering</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h5>Opening Hours</h5>
+          <ul class="footer-links">
+            <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
+            <li>Fri - Sat: 11:00 AM - 11:30 PM</li>
+            <li>Sunday: 12:00 PM - 10:00 PM</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contact Us</h5>
+          <p class="small mb-1">📍 124 Spice Market Way, Foodville, CA</p>
+          <p class="small mb-1">📞 (800) 555-0199</p>
+          <p class="small mb-1">✉️ hello@shawarmagrill.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 Shawarma &amp; Middle Eastern Grill. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/cart.js"></script>
+
+  <!-- Interactive Contact Page Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set minimum date/time to now for date picker
+      const dateTimeInput = document.getElementById('cntDateTime');
+      if (dateTimeInput) {
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        dateTimeInput.min = now.toISOString().slice(0, 16);
+      }
+
+      // Handle Enquiry Type Pre-selection from Buttons
+      const enquiryLinks = document.querySelectorAll('[data-select-enquiry]');
+      const enquirySelect = document.getElementById('cntEnquiryType');
+
+      enquiryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const type = this.getAttribute('data-select-enquiry');
+          if (enquirySelect && type) {
+            enquirySelect.value = type;
+            // Also trigger input/change event
+            enquirySelect.dispatchEvent(new Event('change'));
+          }
+        });
+      });
+
+      // Update confirmation reference dynamically when form submits
+      const contactForm = document.getElementById('contactForm');
+      const demoConfId = document.getElementById('demoConfId');
+      if (contactForm && demoConfId) {
+        contactForm.addEventListener('submit', function() {
+          const randomNum = Math.floor(1000 + Math.random() * 9000);
+          demoConfId.textContent = 'SG-' + new Date().getFullYear() + '-' + randomNum;
+        });
+      }
+    });
+  </script>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </button>
+</body>
+</html>

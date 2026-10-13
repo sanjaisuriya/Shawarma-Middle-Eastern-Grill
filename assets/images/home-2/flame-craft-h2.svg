@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#18181B"/>
+  <rect x="25" y="25" width="950" height="650" fill="none" stroke="#0D9488" stroke-width="4" rx="20"/>
+  <circle cx="500" cy="300" r="180" fill="#C83E2B" opacity="0.2"/>
+  <text x="500" y="290" font-family="sans-serif" font-size="40" font-weight="bold" fill="#F3F4F6" text-anchor="middle">🔥 OPEN OAK CHARCOAL HEARTH</text>
+  <text x="500" y="350" font-family="sans-serif" font-size="24" fill="#0D9488" text-anchor="middle">Authentic Flame-Fired Craftsmanship &amp; Fresh Saj Bread</text>
+  <text x="500" y="420" font-family="sans-serif" font-size="18" fill="#9CA3AF" text-anchor="middle">Prepared Fresh On Event Morning</text>
+</svg>

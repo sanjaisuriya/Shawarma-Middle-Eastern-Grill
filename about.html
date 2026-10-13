@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Shawarma &amp; Middle Eastern Grill</title>
+  <meta name="description" content="Discover our culinary history, hand-ground Levant spices, pitmaster craftsmanship, and dedication to authentic 100% Halal slow-roasted shawarma and wood-charcoal grilling.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand me-auto me-lg-3" href="index.html">
+        <img src="assets/images/logo/logo-dark.svg" alt="Shawarma &amp; Middle Eastern Grill" class="navbar-brand-logo theme-logo-light" onerror="this.onerror=null; this.src='assets/images/logo/logo-dark.svg';">
+      </a>
+
+      <!-- Icon-Only Control Buttons & Action Group -->
+      <div class="header-actions-group order-lg-last">
+        <div class="header-icon-group">
+          <!-- Theme Toggle Icon Button -->
+          <button class="header-icon-btn theme-toggle-btn" aria-label="Switch to Dark Mode" title="Toggle dark/light theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- RTL Icon Button -->
+          <button class="header-icon-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL) layout" title="Switch to RTL">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="direction-icon">
+              <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm11.146-7.854a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H9.5a.5.5 0 0 1 0-1h4.793l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </button>
+
+          <!-- Cart Icon Button -->
+          <a href="menu.html" class="header-icon-btn cart-btn" aria-label="View Shopping Cart (2 items)" title="Shopping Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <span class="cart-badge">2</span>
+          </a>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <a href="menu.html" class="btn btn-spice d-none d-sm-inline-flex">Order Online</a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-lg-3 me-lg-0 mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home Pages</a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home 1 – Restaurant Landing</a></li>
+              <li><a class="dropdown-item" href="home-catering.html">Home 2 – Grill &amp; Catering Landing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="menu.html" class="btn btn-spice d-sm-none w-100 mt-2">Order Online</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Page Banner -->
+  <section class="page-banner page-banner-about">
+    <div class="container">
+      <div class="max-w-700 mx-auto text-center">
+        <span class="hero-badge mb-3">Est. 1998 &bull; Levant Culinary Heritage</span>
+        <h1 class="display-4 font-heading text-white mb-3">Our Story &amp; Food Philosophy</h1>
+        <p class="lead text-light opacity-90 mb-4">Honouring century-old Levant spice traditions, slow-roasted rotisserie shawarma, and live lump charcoal grilling with genuine Arabic hospitality.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="menu.html" class="btn btn-spice">Explore Our Menu</a>
+          <a href="catering.html" class="btn btn-outline-gold text-white border-white">Catering Services</a>
+        </div>
+        <div class="breadcrumb-custom mt-4">
+          <a href="index.html">Home</a> &bull; <span>About Us</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Origin Story: From Aleppo Spice Markets to Master Grill -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-subtitle">Our Heritage &amp; Roots</span>
+          <h2 class="section-title">From Ancient Spice Markets to the Open Hearth</h2>
+          <p class="lead">What began in 1998 as a family spice and grilling stall in the historic market lanes of Aleppo has evolved into a welcoming home for authentic Middle Eastern comfort dining.</p>
+          <p class="text-muted">Founded by Master Pitmaster Tariq Mansour and his family, our passion has always centered around the sacred connection between fire, meat, and mortar-ground botanicals. When our family relocated, we brought our hand-beaten brass mortar, heirloom sourdough starter for fresh saj bread, and seven-spice family recipe across continents.</p>
+          <p class="text-muted">Today, Shawarma &amp; Middle Eastern Grill stands as a tribute to those generations of culinary craftsmanship. Every dish we serve is rooted in reverence for Levant traditions—never taking shortcuts with pre-ground factory seasonings, liquid smoke, or artificial marinades.</p>
+          <div class="d-flex align-items-center gap-3 pt-2">
+            <div class="border-start border-3 border-warning ps-3">
+              <p class="fst-italic text-dark fw-medium mb-0">"Authentic Levantine cooking isn't fast food—it's an ancient art of patiently balancing citrus acidity, garlic warmth, and slow-searing hardwood fire."</p>
+              <small class="text-spice fw-semibold">— Chef Tariq Mansour, Founder</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="assets/images/about/heritage-hearth-story.jpg" onerror="this.onerror=null; this.src='assets/images/about/story-kitchen-about.svg';" alt="From Ancient Spice Markets to the Open Hearth - Levant Culinary Heritage" class="img-fluid rounded-4 shadow-lg border border-warning section-feature-img w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Mission & Core Values -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container py-4">
+      <div class="text-center mb-5 max-w-700 mx-auto">
+        <span class="section-subtitle">Why We Stand Apart</span>
+        <h2 class="section-title">Our Mission &amp; Core Kitchen Values</h2>
+        <p class="text-muted">We believe honest cooking stems from uncompromised principles: respect for wholesome ingredients, meticulous craftsmanship, and welcoming every guest as family.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card text-center h-100 p-4 rounded-4 bg-card shadow-sm border border-light">
+            <div class="feature-icon-box mx-auto mb-3" style="width: 58px; height: 58px; font-size: 1.75rem; display: flex; align-items: center; justify-content: center; background: rgba(224, 159, 62, 0.15); border-radius: 50%;">🌱</div>
+            <h4 class="font-heading fs-5 mb-2">Halal Options &amp; Quality Meats</h4>
+            <p class="text-muted small mb-0">Carefully sourced meats selected for tenderness and flavor, with certified Halal options available across our shawarma and grill selections.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card text-center h-100 p-4 rounded-4 bg-card shadow-sm border border-light">
+            <div class="feature-icon-box mx-auto mb-3" style="width: 58px; height: 58px; font-size: 1.75rem; display: flex; align-items: center; justify-content: center; background: rgba(193, 73, 59, 0.15); border-radius: 50%;">🔥</div>
+            <h4 class="font-heading fs-5 mb-2">Charcoal-Grilled Favorites</h4>
+            <p class="text-muted small mb-0">Our signature kebabs and skewers are flame-grilled over natural charcoal embers to achieve authentic smoky aromas and savory caramelized edges.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card text-center h-100 p-4 rounded-4 bg-card shadow-sm border border-light">
+            <div class="feature-icon-box mx-auto mb-3" style="width: 58px; height: 58px; font-size: 1.75rem; display: flex; align-items: center; justify-content: center; background: rgba(224, 159, 62, 0.15); border-radius: 50%;">🧄</div>
+            <h4 class="font-heading fs-5 mb-2">Fresh In-House Preparation</h4>
+            <p class="text-muted small mb-0">Crafted with care in our kitchen—from smooth tahini and whipped garlic toum to fresh salads and freshly prepared saj wraps.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card text-center h-100 p-4 rounded-4 bg-card shadow-sm border border-light">
+            <div class="feature-icon-box mx-auto mb-3" style="width: 58px; height: 58px; font-size: 1.75rem; display: flex; align-items: center; justify-content: center; background: rgba(107, 142, 35, 0.15); border-radius: 50%;">🤝</div>
+            <h4 class="font-heading fs-5 mb-2">Generous Levant Hospitality</h4>
+            <p class="text-muted small mb-0">Rooted in traditional 'Karam' (generosity). Hearty portions, warm greetings, attentive service, and genuine care for every guest who walks through our doors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Food Preparation Approach: The Science & Art Behind Our Flame -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2">
+          <span class="section-subtitle">Our Culinary Process</span>
+          <h2 class="section-title">The Art of Vertical Roasting &amp; Flame Seared Skewers</h2>
+          <p class="lead">Creating the perfect shawarma requires hours of calculated patience and exact culinary execution.</p>
+          
+          <div class="mb-4">
+            <h5 class="font-heading mb-1 text-spice">1. 24-Hour Citrus &amp; Spice Infusion</h5>
+            <p class="text-muted small mb-3">Fresh hand-sliced chicken breast and ribeye cuts are marinated for a full 24 hours in extra virgin olive oil, cold-pressed lemon juice, garlic paste, cardamom, nutmeg, and smoked Aleppo pepper.</p>
+          </div>
+
+          <div class="mb-4">
+            <h5 class="font-heading mb-1 text-spice">2. Stacked Cones on Vertical Rotisseries</h5>
+            <p class="text-muted small mb-3">Our master pitmasters tightly layer marinated slices into dense vertical cones weighing up to 40 kg, alternating lean muscle with thin cuts of lamb tallow for continuous self-basting richness.</p>
+          </div>
+
+          <div class="mb-4">
+            <h5 class="font-heading mb-1 text-spice">3. Shaved to Order &amp; Blistered on Saj Flatbread</h5>
+            <p class="text-muted small mb-0">Only the crisp outer caramelized layer is shaved with a sharp curved blade upon ordering, wrapped into freshly flipped dome saj bread, and toasted on the plancha with a brush of spiced marinade.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <img src="assets/images/about/vertical-roasting-process.jpg" onerror="this.onerror=null; this.src='assets/images/about/story-kitchen-about.svg';" alt="The Art of Vertical Roasting &amp; Flame Seared Skewers - Artisanal Shawarma &amp; Charcoal Grilling" class="img-fluid rounded-4 shadow-lg border border-warning section-feature-img w-100">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Ingredient & Food Standards -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container py-4">
+      <div class="text-center mb-5 max-w-700 mx-auto">
+        <span class="section-subtitle">Purity in Every Bite</span>
+        <h2 class="section-title">Ingredient &amp; Kitchen Quality Standards</h2>
+        <p class="text-muted">We hold ourselves to rigorous culinary guidelines. Transparent sourcing and conscientious food handling are at the center of our daily routine.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-card h-100 shadow-sm border border-light">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3 text-warning">🥩</span>
+              <h5 class="font-heading mb-0">Quality Meats &amp; Halal Options</h5>
+            </div>
+            <p class="text-muted small mb-2">Selected from trusted suppliers with high standards for freshness, tenderness, and flavor. Certified Halal options are readily available across our menu.</p>
+            <span class="badge bg-warning text-dark small">Halal Options Available</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-card h-100 shadow-sm border border-light">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3 text-warning">🫒</span>
+              <h5 class="font-heading mb-0">Olive Oil &amp; Quality Ingredients</h5>
+            </div>
+            <p class="text-muted small mb-2">We prioritize quality olive oil and wholesome kitchen staples for our marinades, meze dips, and dressings to deliver rich, authentic Mediterranean flavors.</p>
+            <span class="badge bg-secondary text-white small">Quality Kitchen Staples</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-card h-100 shadow-sm border border-light">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3 text-warning">🌿</span>
+              <h5 class="font-heading mb-0">Fresh Herbs &amp; Aromatic Spices</h5>
+            </div>
+            <p class="text-muted small mb-2">Fresh parsley, mint, and cilantro are prepped regularly for our salads and garnishes, paired with traditional Levant spice blends like sumac, za'atar, and Aleppo pepper.</p>
+            <span class="badge bg-success text-white small">Authentic Levant Spices</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-card h-100 shadow-sm border border-light">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3 text-warning">🛡️</span>
+              <h5 class="font-heading mb-0">Honest In-House Recipes</h5>
+            </div>
+            <p class="text-muted small mb-2">Our signature sauces—including garlic toum, sesame tahini, and spicy shatta—are prepared in-house using traditional ingredients without unnecessary fillers.</p>
+            <span class="badge bg-danger text-white small">Traditional Recipes</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-card h-100 shadow-sm border border-light">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3 text-warning">🥗</span>
+              <h5 class="font-heading mb-0">Dietary &amp; Vegetarian Choices</h5>
+            </div>
+            <p class="text-muted small mb-2">We offer a wide variety of vegetarian and vegan favorites—such as falafel, hummus, and fattoush—and take care when preparing meals for guests with dietary preferences.</p>
+            <span class="badge bg-info text-dark small">Vegetarian &amp; Vegan Options</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 rounded-4 bg-card h-100 shadow-sm border border-light">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3 text-warning">🌾</span>
+              <h5 class="font-heading mb-0">Warm Saj &amp; Pita Breads</h5>
+            </div>
+            <p class="text-muted small mb-2">Thin saj flatbreads and soft pita are warmed and served fresh to order, providing the perfect wrap for our shawarmas and the ideal scoop for cold mezze.</p>
+            <span class="badge bg-primary text-white small">Fresh Bread Service</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-light border border-warning text-center mt-4 mb-0 py-2">
+        <small class="text-muted"><strong>Note:</strong> Please mention any dietary requirements when ordering, and we’ll let you know which options we can accommodate.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Team & Chef Profiles -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5 max-w-700 mx-auto">
+        <span class="section-subtitle">The Culinary Masters</span>
+        <h2 class="section-title">Meet Our Chefs &amp; Leadership</h2>
+        <p class="text-muted">Behind every fragrant platter and tender skewer is a team dedicated to master craftsmanship and genuine hospitality.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-card h-100">
+            <div class="position-relative overflow-hidden" style="height: 280px;">
+              <img src="assets/images/team/chef-tariq-portrait.jpg" alt="Chef Tariq Mansour - Master Pitmaster" class="card-img-top w-100 h-100 object-fit-cover" style="object-position: center 8%;" onerror="this.onerror=null; this.src='assets/images/team/chef-tariq-about.svg';">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading mb-1">Chef Tariq Mansour</h4>
+              <span class="text-spice fw-semibold d-block mb-3">Master Pitmaster &amp; Co-Founder</span>
+              <p class="card-text text-muted small mb-3">With over 28 years perfected over vertical rotisseries and glowing oak coals, Chef Tariq personally curates our 7-spice marinades and meat butchery across all locations.</p>
+              <div class="mt-auto pt-2 border-top">
+                <small class="text-warning fw-medium">Specialty: Slow-Roasted Lamb Shawarma &amp; Aleppo Spices</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-card h-100">
+            <div class="position-relative overflow-hidden" style="height: 280px;">
+              <img src="assets/images/team/chef-layla-portrait.jpg" alt="Chef Layla Haddad - Head of Meze &amp; Pastry" class="card-img-top w-100 h-100 object-fit-cover" style="object-position: center 10%;" onerror="this.onerror=null; this.src='assets/images/team/chef-layla-about.svg';">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading mb-1">Chef Layla Haddad</h4>
+              <span class="text-spice fw-semibold d-block mb-3">Head of Meze, Sauces &amp; Pastry</span>
+              <p class="card-text text-muted small mb-3">Trained in Beirut and Damascus, Chef Layla oversees our cold meze pantry, crafting velvety hummus bil tahini, hot melted cheese kunafa, and our signature whipped garlic toum.</p>
+              <div class="mt-auto pt-2 border-top">
+                <small class="text-warning fw-medium">Specialty: Silk Hummus, Crisp Falafel &amp; Pistachio Baklava</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-card h-100">
+            <div class="position-relative overflow-hidden" style="height: 280px;">
+              <img src="assets/images/team/manager-youssef-portrait.jpg" alt="Youssef El-Sayed - Catering &amp; Hospitality Director" class="card-img-top w-100 h-100 object-fit-cover" style="object-position: center 10%;" onerror="this.onerror=null; this.src='assets/images/team/manager-youssef-about.svg';">
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading mb-1">Youssef El-Sayed</h4>
+              <span class="text-spice fw-semibold d-block mb-3">Hospitality &amp; Catering Director</span>
+              <p class="card-text text-muted small mb-3">Youssef brings 15 years in luxury hospitality management, ensuring that every corporate lunch, wedding celebration, and dine-in guest experiences warm Levant attentiveness.</p>
+              <div class="mt-auto pt-2 border-top">
+                <small class="text-warning fw-medium">Specialty: Event Catering Logistics &amp; Guest Experience</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Restaurant Milestones / History Highlights (Sample illustrative timeline) -->
+  <section class="py-5 bg-surface-alt">
+    <div class="container py-4">
+      <div class="text-center mb-5 max-w-700 mx-auto">
+        <span class="section-subtitle">Our Journey</span>
+        <h2 class="section-title">Milestones in Our Grill Story</h2>
+        <p class="text-muted">An illustrative timeline of how our culinary traditions, kitchen craft, and hospitality evolved over the years (Sample Timeline).</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-10">
+          <div class="timeline-wrapper position-relative ps-4 ps-md-5 border-start border-3 border-warning ms-2 ms-md-4">
+            
+            <!-- Milestone 1 -->
+            <div class="mb-5 position-relative">
+              <div class="position-absolute top-0 start-0 translate-middle-x bg-warning rounded-circle d-flex align-items-center justify-content-center text-dark fw-bold" style="width: 32px; height: 32px; left: -25px; top: 8px;">1</div>
+              <div class="bg-card p-4 rounded-4 shadow-sm border border-light">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                  <h4 class="font-heading fs-5 mb-0">Early Beginnings: Traditional Spice Blends</h4>
+                  <span class="badge bg-warning bg-opacity-25 text-dark border border-warning">Sample Milestone</span>
+                </div>
+                <p class="text-muted small mb-0">Developing our core marinades and hand-blended spice recipes, building an early dedication to slow flame-roasting and freshly rolled flatbreads.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="mb-5 position-relative">
+              <div class="position-absolute top-0 start-0 translate-middle-x bg-warning rounded-circle d-flex align-items-center justify-content-center text-dark fw-bold" style="width: 32px; height: 32px; left: -25px; top: 8px;">2</div>
+              <div class="bg-card p-4 rounded-4 shadow-sm border border-light">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                  <h4 class="font-heading fs-5 mb-0">Kitchen Craft: Fresh Saj &amp; Live Charcoal</h4>
+                  <span class="badge bg-warning bg-opacity-25 text-dark border border-warning">Sample Milestone</span>
+                </div>
+                <p class="text-muted small mb-0">Introducing custom dome saj baking and hardwood charcoal grills to bring authentic oven-fresh flatbreads and flame-seared skewers to our guests daily.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="mb-5 position-relative">
+              <div class="position-absolute top-0 start-0 translate-middle-x bg-warning rounded-circle d-flex align-items-center justify-content-center text-dark fw-bold" style="width: 32px; height: 32px; left: -25px; top: 8px;">3</div>
+              <div class="bg-card p-4 rounded-4 shadow-sm border border-light">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                  <h4 class="font-heading fs-5 mb-0">Flagship Restaurant: Dedicated Grill &amp; Meze Kitchen</h4>
+                  <span class="badge bg-warning bg-opacity-25 text-dark border border-warning">Sample Milestone</span>
+                </div>
+                <p class="text-muted small mb-0">Opening our flagship dining space featuring dedicated vertical shawarma rotisseries, an open exhibition charcoal grill, and an in-house cold meze prep station.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="position-relative">
+              <div class="position-absolute top-0 start-0 translate-middle-x bg-warning rounded-circle d-flex align-items-center justify-content-center text-dark fw-bold" style="width: 32px; height: 32px; left: -25px; top: 8px;">4</div>
+              <div class="bg-card p-4 rounded-4 shadow-sm border border-light">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                  <h4 class="font-heading fs-5 mb-0">Expanded Hospitality: Event &amp; Private Catering</h4>
+                  <span class="badge bg-warning bg-opacity-25 text-dark border border-warning">Sample Milestone</span>
+                </div>
+                <p class="text-muted small mb-0">Launching full-service catering with custom packages, family-style mixed grill platters, and dedicated setups for gatherings and celebrations.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Customer Testimonials (Clearly labeled as sample content) -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5 max-w-700 mx-auto">
+        <span class="section-subtitle">What Our Guests Say</span>
+        <h2 class="section-title">Words from Our Diners</h2>
+        <p class="text-muted">Honest reviews from regulars who love our spit-roasted meats, charcoal flavor, and hospitality.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-card d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="text-warning fs-5">★★★★★</div>
+              <span class="badge bg-warning bg-opacity-25 text-dark border border-warning small">Sample Customer Review</span>
+            </div>
+            <p class="card-text text-muted small fst-italic mb-4">"The chicken shawarma here reminds me of the authentic street corner stalls in Beirut. The toum is sharp and creamy with no aftertaste, and the freshly blistered saj bread is on another level."</p>
+            <div class="mt-auto d-flex align-items-center">
+              <div class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center me-3" style="width: 44px; height: 44px;">
+                RK
+              </div>
+              <div>
+                <h6 class="mb-0 font-heading">Rami K.</h6>
+                <small class="text-muted">Local Food Critic &amp; Regular Diner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-card d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="text-warning fs-5">★★★★★</div>
+              <span class="badge bg-warning bg-opacity-25 text-dark border border-warning small">Sample Customer Review</span>
+            </div>
+            <p class="card-text text-muted small fst-italic mb-4">"We hired their catering crew for our 90-person family wedding rehearsal. The live grill platters arrived sizzling hot and the guests could not stop raving about the lamb kofta skewers and spiced rice!"</p>
+            <div class="mt-auto d-flex align-items-center">
+              <div class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center me-3" style="width: 44px; height: 44px;">
+                SL
+              </div>
+              <div>
+                <h6 class="mb-0 font-heading">Sarah &amp; David L.</h6>
+                <small class="text-muted">Catering Clients (Family Gathering)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-card d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="text-warning fs-5">★★★★★</div>
+              <span class="badge bg-warning bg-opacity-25 text-dark border border-warning small">Sample Customer Review</span>
+            </div>
+            <p class="card-text text-muted small fst-italic mb-4">"Hands down the best mixed grill platter in town. The charcoal char adds an aroma that gas grills can never replicate. Pair it with the mint lemonade and hot kunafa!"</p>
+            <div class="mt-auto d-flex align-items-center">
+              <div class="rounded-circle bg-warning text-dark fw-bold d-flex align-items-center justify-content-center me-3" style="width: 44px; height: 44px;">
+                MA
+              </div>
+              <div>
+                <h6 class="mb-0 font-heading">Marcus A.</h6>
+                <small class="text-muted">Weekly Dine-In Guest</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <small class="text-muted"><em>All testimonials above are illustrative sample customer reviews and can be updated with verified customer ratings.</em></small>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Closing Call to Action Banner -->
+  <section class="py-5 bg-dark text-white text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, #1c1917 0%, #292524 100%);">
+    <div class="container py-4 position-relative" style="z-index: 2;">
+      <span class="hero-badge mb-3">Taste The Tradition</span>
+      <h2 class="display-5 font-heading text-white mb-3">Ready to Experience Authentic Levant Grilling?</h2>
+      <p class="lead text-light opacity-90 mb-4 max-w-700 mx-auto">Whether you're stopping by for a warm shawarma wrap or organizing a lavish catering feast for your next celebration, we invite you to our table.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="menu.html" class="btn btn-spice btn-lg px-4">Browse Our Menu</a>
+        <a href="catering.html" class="btn btn-outline-gold btn-lg px-4 text-white border-white">Request Catering Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <img src="assets/images/logo/logo-light.svg" alt="Shawarma &amp; Grill Logo" class="mb-3" style="height: 48px;" onerror="this.onerror=null; this.src='assets/images/logo/logo-light.svg';">
+          <p class="small">Authentic Middle Eastern cuisine crafted with passion, hand-ground spices, and slow charcoal fire. Certified 100% Halal.</p>
+          <div class="footer-social-links mt-3">
+            <a href="https://instagram.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.944-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.271 1.229a4.008 4.008 0 1 0 0 8.016 4.008 4.008 0 0 0 0-8.016zm0 1.442a2.566 2.566 0 1 1 0 5.132 2.566 2.566 0 0 1 0-5.132z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on X (Twitter)" title="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M12.6 0h2.454l-5.36 6.126L16 16h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.554L0 0h5.063l3.495 4.633L12.601 0zm-.86 14.538h1.36L4.323 1.394H2.864l8.876 13.144z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com/@shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe to our YouTube channel" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022 1.082.006.544c0 .272.002.544.002.816s-.002.544-.002.816l-.006.544-.022 1.082-.01.104c-.048.519-.119 1.023-.22 1.402a2.007 2.007 0 0 1-1.415 1.42c-1.123.302-5.288.332-6.11.335h-.163c-.822-.003-4.987-.033-6.11-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.883-.22-1.402l-.01-.104-.022-1.082-.006-.544C0 9.073 0 8.801 0 8.529s.002-.544.002-.816l.006-.544.022-1.082.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c1.123-.302 5.288-.332 6.11-.335zM6.1 5.485v6.03l5.228-3.015L6.1 5.485z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h5>Opening Hours</h5>
+          <ul class="footer-links">
+            <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
+            <li>Fri - Sat: 11:00 AM - 11:30 PM</li>
+            <li>Sunday: 12:00 PM - 10:00 PM</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contact Us</h5>
+          <p class="small mb-1">📍 124 Spice Market Way, Foodville, CA</p>
+          <p class="small mb-1">📞 (800) 555-0199</p>
+          <p class="small mb-1">✉️ hello@shawarmagrill.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 Shawarma &amp; Middle Eastern Grill. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </button>
+</body>
+</html>

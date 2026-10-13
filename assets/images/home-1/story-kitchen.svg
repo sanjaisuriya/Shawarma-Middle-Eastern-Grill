@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <rect width="600" height="450" fill="#24242C"/>
+  <!-- Copper Pots & Spice Jars Art -->
+  <circle cx="300" cy="225" r="160" fill="#C83E2B" opacity="0.15"/>
+  <ellipse cx="300" cy="360" rx="220" ry="40" fill="#18181F"/>
+  <!-- Copper Bowl -->
+  <path d="M 180 280 C 180 380, 420 380, 420 280 Z" fill="#D97724"/>
+  <ellipse cx="300" cy="280" rx="120" ry="25" fill="#F4C463"/>
+  <!-- Spices inside bowl -->
+  <ellipse cx="300" cy="280" rx="110" ry="20" fill="#C83E2B"/>
+  <circle cx="280" cy="275" r="10" fill="#E5A93B"/>
+  <circle cx="330" cy="282" r="8" fill="#8D230F"/>
+  <!-- Olive Oil Pitcher -->
+  <path d="M 450 200 L 490 350 L 430 350 Z" fill="#2E7D32"/>
+  <ellipse cx="460" cy="200" rx="20" ry="8" fill="#81C784"/>
+  <text x="300" y="80" font-family="'Playfair Display', serif" font-weight="700" font-size="24" fill="#E5A93B" text-anchor="middle">Authentic Culinary Heritage</text>
+  <text x="300" y="110" font-family="'Outfit', sans-serif" font-size="14" fill="#E2E2E8" text-anchor="middle">Spices Hand-Ground Daily Since 1998</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <rect width="600" height="450" fill="#FAF6F0"/>
+  <!-- Plate -->
+  <circle cx="300" cy="225" r="180" fill="#FFFFFF" stroke="#E6DEC3" stroke-width="6"/>
+  <circle cx="300" cy="225" r="160" fill="#FDFBF7"/>
+  <!-- Toasted Saj Wrap -->
+  <g transform="rotate(-15 300 225)">
+    <rect x="160" y="185" width="280" height="80" rx="40" fill="#F4C463" stroke="#D97724" stroke-width="4"/>
+    <!-- Grill marks on wrap -->
+    <line x1="220" y1="185" x2="200" y2="265" stroke="#8D230F" stroke-width="5" opacity="0.7"/>
+    <line x1="260" y1="185" x2="240" y2="265" stroke="#8D230F" stroke-width="5" opacity="0.7"/>
+    <line x1="300" y1="185" x2="280" y2="265" stroke="#8D230F" stroke-width="5" opacity="0.7"/>
+    <line x1="340" y1="185" x2="320" y2="265" stroke="#8D230F" stroke-width="5" opacity="0.7"/>
+    <line x1="380" y1="185" x2="360" y2="265" stroke="#8D230F" stroke-width="5" opacity="0.7"/>
+    <!-- Cut end showing meat and garlic toum -->
+    <ellipse cx="440" cy="225" rx="20" ry="38" fill="#C83E2B"/>
+    <circle cx="440" cy="215" r="10" fill="#FFFFFF"/> <!-- Toum -->
+    <circle cx="435" cy="235" r="8" fill="#2E7D32"/> <!-- Pickle -->
+  </g>
+  <text x="300" y="380" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#1E1E24" text-anchor="middle">Signature Toasted Saj Wrap</text>
+  <text x="300" y="405" font-family="'Outfit', sans-serif" font-size="14" fill="#C83E2B" text-anchor="middle">Wrapped in Fresh Baked Saj Bread with Extra Toum</text>
+</svg>

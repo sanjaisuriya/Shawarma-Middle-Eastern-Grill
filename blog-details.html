@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 7 Essential Shawarma Spices | Spice Journal</title>
+  <meta name="description" content="Read our deep dive into the 7 secret spices of authentic Levant shawarma: cardamom, sumac, cumin, allspice, paprika, cloves, and nutmeg.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand me-auto me-lg-3" href="index.html">
+        <img src="assets/images/logo/logo-dark.svg" alt="Shawarma &amp; Middle Eastern Grill" class="navbar-brand-logo theme-logo-light" onerror="this.onerror=null; this.src='assets/images/logo/logo-dark.svg';">
+      </a>
+
+      <!-- Icon-Only Control Buttons & Action Group -->
+      <div class="header-actions-group order-lg-last">
+        <div class="header-icon-group">
+          <!-- Theme Toggle Icon Button -->
+          <button class="header-icon-btn theme-toggle-btn" aria-label="Switch to Dark Mode" title="Toggle dark/light theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- RTL Icon Button -->
+          <button class="header-icon-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL) layout" title="Switch to RTL">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="direction-icon">
+              <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm11.146-7.854a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H9.5a.5.5 0 0 1 0-1h4.793l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </button>
+
+          <!-- Cart Icon Button -->
+          <a href="menu.html" class="header-icon-btn cart-btn" aria-label="View Shopping Cart (2 items)" title="Shopping Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <span class="cart-badge">2</span>
+          </a>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <a href="menu.html" class="btn btn-spice d-none d-sm-inline-flex">Order Online</a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-lg-3 me-lg-0 mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home Pages</a>
+            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item" href="index.html">Home 1 – Restaurant Landing</a></li>
+              <li><a class="dropdown-item" href="home-catering.html">Home 2 – Grill &amp; Catering Landing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="menu.html" class="btn btn-spice d-sm-none w-100 mt-2">Order Online</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="page-banner page-banner-blog">
+    <div class="container">
+      <div class="max-w-700 mx-auto text-center">
+        <span class="hero-badge mb-3" id="bannerCategoryBadge">🌿 Shawarma Craft</span>
+        <h1 class="display-4 font-heading text-white mb-3" id="bannerArticleTitle">The Art of Slow-Roasted Shawarma: Secrets from the Vertical Spit</h1>
+        <p class="lead text-light opacity-90 mb-4" id="bannerArticleSnippet">Inside our dawn preparation ritual: alternating chicken thigh and lamb flank on the spit, secret sumac marinades, and charcoal temperature mastery.</p>
+        <div class="breadcrumb-custom mt-4">
+          <a href="index.html">Home</a> &bull; <a href="blog.html">Blog</a> &bull; <span id="breadcrumbArticleTitle">Slow-Roasted Shawarma Secrets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Details Content -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+        <!-- Main Article Column -->
+        <div class="col-lg-8">
+          <article>
+            <div class="mb-4">
+              <span class="badge-dietary badge-halal" id="articleBadge">Shawarma Craft</span>
+              <h1 class="display-5 font-heading my-3" id="articleTitle">The Art of Slow-Roasted Shawarma: Secrets from the Vertical Spit</h1>
+              <div class="d-flex align-items-center gap-3 text-muted border-bottom border-color pb-3">
+                <img src="assets/images/blog/author-tariq-badge.svg" alt="Chef Tariq" id="articleAuthorAvatar" class="rounded-circle" style="width: 48px; height: 48px; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/food/food-placeholder.svg';">
+                <div>
+                  <strong class="text-main d-block" id="articleAuthorName">Written by Chef Tariq Al-Mansoor</strong>
+                  <small id="articleMeta">Published October 12, 2026 &bull; 6 Min Read</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article Hero Graphic -->
+            <div class="article-hero-img-wrap mb-4" id="articleHeroImgWrap">
+              <img src="assets/images/blog/blog-featured-rotisserie.jpg" alt="The Art of Slow-Roasted Shawarma: Secrets from the Vertical Spit" id="articleHeroImg" class="article-hero-img img-fluid w-100 rounded-4" onerror="this.onerror=null; this.src='assets/images/food/food-placeholder.svg';">
+            </div>
+
+            <div id="articleBody">
+            <p class="lead">What elevates street-food shawarma into a dining experience fit for royalty? While slow vertical roasting and high-temperature searing are critical, the true soul of Levant shawarma begins at 5 a.m. with the preparation ritual, meat stacking geometry, and heat management.</p>
+
+            <p class="text-muted">In our hearth kitchen, the rotisserie is not simply a piece of cooking equipment—it is a vertical balance of radiant heat, fat basting, and gravity. Here are the core pillars behind our signature spit craft:</p>
+
+            <h3 class="font-heading mt-4 mb-2">1. The 5 A.M. Spit Assembly Ritual</h3>
+            <p class="text-muted">Every morning starts with deboning whole chicken thighs and slicing grain-fed lamb flank into uniform sheets. We never use minced meat fillers or pre-frozen cones. Each layer is hand-draped over the stainless-steel skewer, pressing firmly to eliminate internal air pockets that cause uneven heat distribution.</p>
+
+            <h3 class="font-heading mt-4 mb-2">2. The 12-Hour Citrus &amp; Sumac Marinade</h3>
+            <p class="text-muted">Acidity is double-edged: too much lemon juice breaks down meat fibres into mush, while too little leaves the interior bland. We blend wild sour sumac, Seville orange zest, garlic toum base, freshly cracked green cardamom, and cold-pressed Lebanese olive oil. The mixture coats every crevice 12 hours before stacking, allowing aromatic essential oils to penetrate deep into the protein.</p>
+
+            <blockquote class="p-4 my-4 bg-surface-alt border-start border-4 border-warning rounded-3 italic">
+              <p class="mb-0 font-heading fs-5 text-main">“A shawarma spit is not merely cooked meat; it is a living thermal sculpture where rendered fat, fruit wood smoke, and wild spices continuously baste every single layer.”</p>
+              <footer class="blockquote-footer mt-2 text-gold font-normal">— Chef Tariq Al-Mansoor</footer>
+            </blockquote>
+
+            <h3 class="font-heading mt-4 mb-2">3. Dual-Zone Heat: The 280°C Sear to 180°C Render</h3>
+            <p class="text-muted">We dial charcoal hearth temperature between 280°C for the initial high-intensity crust formation and 180°C for the continuous slow render. This dual-zone thermal control seals in the natural moisture while developing an irresistible caramelized mahogany crust on the outer perimeter.</p>
+
+            <h3 class="font-heading mt-4 mb-2">4. The 45-Degree Shaving Technique</h3>
+            <p class="text-muted">Carving requires an ultra-sharp Damascus steel blade held at a strict 45-degree angle. By shaving paper-thin ribbons instead of thick chunks, every slice presents maximum surface area of crispy caramelized exterior and succulent, juicy interior.</p>
+            </div>
+
+            <hr class="my-5 border-color">
+
+            <!-- Author Bio Box -->
+            <div class="card p-4 border border-color rounded-4 bg-surface d-flex flex-row align-items-center gap-4">
+              <img src="assets/images/blog/author-tariq.svg" alt="Chef Tariq Al-Mansoor" id="authorBioAvatar" class="rounded-circle" style="width: 80px; height: 80px; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/food/food-placeholder.svg';">
+              <div>
+                <h4 class="font-heading mb-1" id="authorBioName">About Chef Tariq Al-Mansoor</h4>
+                <p class="text-muted small mb-0" id="authorBioDesc">Chef Tariq is the co-founder and master pitmaster at Shawarma &amp; Middle Eastern Grill, dedicated to preserving 200-year-old Levant spice traditions.</p>
+              </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="mt-5">
+              <h3 class="font-heading mb-4" id="commentsCount">Guest Comments (2)</h3>
+              <div id="commentsList">
+              <div class="d-flex gap-3 mb-4 p-3 bg-surface border border-color rounded-3">
+                <div class="fw-bold fs-4 text-spice">💬</div>
+                <div>
+                  <h5 class="mb-1">Hassan K. <small class="text-muted fs-6 font-normal">&bull; Oct 11, 2026</small></h5>
+                  <p class="text-muted small mb-0">Fascinating read! I always wondered what gave your chicken shawarma that incredible fragrance. Keep the articles coming!</p>
+                </div>
+              </div>
+              <div class="d-flex gap-3 p-3 bg-surface border border-color rounded-3">
+                <div class="fw-bold fs-4 text-spice">💬</div>
+                <div>
+                  <h5 class="mb-1">Emily R. <small class="text-muted fs-6 font-normal">&bull; Oct 11, 2026</small></h5>
+                  <p class="text-muted small mb-0">The sumac and cardamom combo is pure magic. Tried your catering last week for our office party—everyone loved it!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </article>
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="col-lg-4">
+          <!-- Sidebar Search -->
+          <div class="card p-4 border border-color rounded-4 bg-surface mb-4" id="sidebarSearchWidget">
+            <h5 class="font-heading mb-3">Search Journal</h5>
+            <form id="detailsBlogSearchForm" role="search" onsubmit="event.preventDefault();">
+              <div class="input-group">
+                <input type="text" id="detailsBlogSearchInput" class="form-control form-control-custom" placeholder="Search topics..." aria-label="Search topics">
+                <button class="btn btn-spice" id="detailsBlogSearchBtn" type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sidebar Categories -->
+          <div class="card p-4 border border-color rounded-4 bg-surface mb-4">
+            <h5 class="font-heading mb-3">Categories</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="py-2 border-bottom border-light"><a href="blog.html" class="text-main d-flex justify-content-between"><span>Recipes &amp; Spices</span> <span class="badge bg-surface-alt text-muted">12</span></a></li>
+              <li class="py-2 border-bottom border-light"><a href="blog.html" class="text-main d-flex justify-content-between"><span>Charcoal Grilling</span> <span class="badge bg-surface-alt text-muted">8</span></a></li>
+              <li class="py-2 border-bottom border-light"><a href="blog.html" class="text-main d-flex justify-content-between"><span>Event Catering</span> <span class="badge bg-surface-alt text-muted">15</span></a></li>
+              <li class="py-2"><a href="blog.html" class="text-main d-flex justify-content-between"><span>Levant Culinary History</span> <span class="badge bg-surface-alt text-muted">6</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Form -->
+          <div class="card p-4 border-0 rounded-4 bg-dark text-white text-center shadow-lg">
+            <h4 class="font-heading text-white mb-2">Subscribe to Spice Club</h4>
+            <p class="small text-light opacity-90 mb-3">Get secret recipes, catering discounts, and chef stories directly to your inbox.</p>
+            
+            <div id="newsletterSuccessAlert" class="form-alert-success small p-2 mb-2">
+              ✓ Subscribed successfully!
+            </div>
+
+            <form id="newsletterForm" novalidate>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-custom text-center" placeholder="Enter your email address" required>
+                <div class="invalid-feedback-custom">Please enter a valid email.</div>
+              </div>
+              <button type="submit" class="btn btn-gold w-100">Subscribe Free</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <img src="assets/images/logo/logo-light.svg" alt="Shawarma &amp; Grill Logo" class="mb-3" style="height: 48px;" onerror="this.onerror=null; this.src='assets/images/logo/logo-light.svg';">
+          <p class="small">Authentic Middle Eastern cuisine crafted with passion, hand-ground spices, and slow charcoal fire. Certified 100% Halal.</p>
+          <div class="footer-social-links mt-3">
+            <a href="https://instagram.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.944-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.271 1.229a4.008 4.008 0 1 0 0 8.016 4.008 4.008 0 0 0 0-8.016zm0 1.442a2.566 2.566 0 1 1 0 5.132 2.566 2.566 0 0 1 0-5.132z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on X (Twitter)" title="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M12.6 0h2.454l-5.36 6.126L16 16h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.554L0 0h5.063l3.495 4.633L12.601 0zm-.86 14.538h1.36L4.323 1.394H2.864l8.876 13.144z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com/@shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe to our YouTube channel" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022 1.082.006.544c0 .272.002.544.002.816s-.002.544-.002.816l-.006.544-.022 1.082-.01.104c-.048.519-.119 1.023-.22 1.402a2.007 2.007 0 0 1-1.415 1.42c-1.123.302-5.288.332-6.11.335h-.163c-.822-.003-4.987-.033-6.11-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.883-.22-1.402l-.01-.104-.022-1.082-.006-.544C0 9.073 0 8.801 0 8.529s.002-.544.002-.816l.006-.544.022-1.082.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c1.123-.302 5.288-.332 6.11-.335zM6.1 5.485v6.03l5.228-3.015L6.1 5.485z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="catering.html">Catering</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <h5>Opening Hours</h5>
+          <ul class="footer-links">
+            <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
+            <li>Fri - Sat: 11:00 AM - 11:30 PM</li>
+            <li>Sunday: 12:00 PM - 10:00 PM</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contact Us</h5>
+          <p class="small mb-1">📍 124 Spice Market Way, Foodville, CA</p>
+          <p class="small mb-1">📞 (800) 555-0199</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 Shawarma &amp; Middle Eastern Grill. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/blog-details.js"></script>
+  <script src="assets/js/form-validation.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </button>
+</body>
+</html>

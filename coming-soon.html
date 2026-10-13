@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening Soon | Downtown Location | Shawarma &amp; Middle Eastern Grill</title>
+  <meta name="description" content="Our second flagship location is opening soon in Downtown! Sign up for exclusive grand opening invitations and free food tasting passes.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <!-- Top Header Controls -->
+  <header class="p-3 sticky-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html">
+        <img src="assets/images/logo/logo-light.svg" alt="Shawarma &amp; Grill Logo" style="height: 44px;" onerror="this.onerror=null; this.src='assets/images/logo/logo-light.svg';">
+      </a>
+      <div class="header-actions-group">
+        <!-- Theme Toggle Icon Button -->
+        <button class="header-icon-btn theme-toggle-btn" aria-label="Switch to Dark Mode" title="Toggle dark/light theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+
+<!-- RTL Icon Button -->
+        <button class="header-icon-btn rtl-toggle-btn" aria-label="Switch to Right-to-Left (RTL) layout" title="Switch to RTL">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="direction-icon">
+                <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3.5a.5.5 0 0 1 .5-.5h8.5a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5zm11.146-7.854a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H9.5a.5.5 0 0 1 0-1h4.793l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+
+        <a href="index.html" class="btn btn-spice ms-2">View Website</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Coming Soon Page Wrapper -->
+  <div class="coming-soon-wrap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          
+          <span class="hero-badge mb-3">🔥 Grand Opening Announcement</span>
+          <h1 class="display-4 font-heading text-white mb-3">Downtown Location Opening Soon!</h1>
+          <p class="lead text-light opacity-90 max-w-600 mx-auto mb-4">We are expanding our slow-roasted vertical spit shawarma and charcoal barbecue grill to Downtown Foodville. Get ready for sizzling flavors, fresh saj, and authentic hospitality.</p>
+
+          <!-- Interactive Countdown Timer -->
+          <div class="countdown-box" id="comingSoonCountdown">
+            <div class="countdown-item">
+              <div class="countdown-number" id="cdDays">18</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="cdHours">14</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="cdMins">32</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="cdSecs">45</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+
+          <!-- VIP Guestlist Signup Form -->
+          <div class="card p-4 p-md-5 border border-color rounded-4 bg-surface text-start max-w-600 mx-auto shadow-lg">
+            <h4 class="font-heading text-center mb-2">Join the VIP Opening Tasting List</h4>
+            <p class="small text-muted text-center mb-4">Subscribe to receive an exclusive invitation to our complimentary pre-launch tasting party!</p>
+
+            <div id="csSuccessAlert" class="form-alert-success">
+              ✓ <strong>VIP Spot Reserved!</strong> Check your email inbox for your exclusive grand opening tasting pass.
+            </div>
+
+            <form id="csForm" onsubmit="event.preventDefault(); document.getElementById('csSuccessAlert').style.display='block';">
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-custom text-center" placeholder="Enter your email address..." required>
+              </div>
+              <button type="submit" class="btn btn-gold w-100 btn-lg">Reserve My VIP Pass</button>
+            </form>
+          </div>
+
+          <!-- Contact Quick Info -->
+          <div class="mt-5 text-light opacity-80 small">
+            <p class="mb-1">📍 New Location: 500 Grand Avenue, Downtown Foodville</p>
+            <p class="mb-0">📞 Contact Us: (800) 555-0199 &bull; <a href="index.html" class="text-warning">Visit Current Restaurant Homepage</a></p>
+            <div class="footer-social-links justify-content-center mt-3">
+              <a href="https://instagram.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Instagram" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.944-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.271 1.229a4.008 4.008 0 1 0 0 8.016 4.008 4.008 0 0 0 0-8.016zm0 1.442a2.566 2.566 0 1 1 0 5.132 2.566 2.566 0 0 1 0-5.132z"/>
+                </svg>
+              </a>
+              <a href="https://facebook.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on Facebook" title="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow us on X (Twitter)" title="X (Twitter)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M12.6 0h2.454l-5.36 6.126L16 16h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.554L0 0h5.063l3.495 4.633L12.601 0zm-.86 14.538h1.36L4.323 1.394H2.864l8.876 13.144z"/>
+                </svg>
+              </a>
+              <a href="https://youtube.com/@shawarmagrill" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe to our YouTube channel" title="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022 1.082.006.544c0 .272.002.544.002.816s-.002.544-.002.816l-.006.544-.022 1.082-.01.104c-.048.519-.119 1.023-.22 1.402a2.007 2.007 0 0 1-1.415 1.42c-1.123.302-5.288.332-6.11.335h-.163c-.822-.003-4.987-.033-6.11-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.883-.22-1.402l-.01-.104-.022-1.082-.006-.544C0 9.073 0 8.801 0 8.529s.002-.544.002-.816l.006-.544.022-1.082.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c1.123-.302 5.288-.332 6.11-.335zM6.1 5.485v6.03l5.228-3.015L6.1 5.485z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    (function() {
+      // Countdown simulation timer logic
+      let days = 18, hours = 14, mins = 32, secs = 45;
+      setInterval(() => {
+        secs--;
+        if (secs < 0) { secs = 59; mins--; }
+        if (mins < 0) { mins = 59; hours--; }
+        if (hours < 0) { hours = 23; days--; }
+        document.getElementById('cdDays').textContent = days;
+        document.getElementById('cdHours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('cdMins').textContent = mins.toString().padStart(2, '0');
+        document.getElementById('cdSecs').textContent = secs.toString().padStart(2, '0');
+      }, 1000);
+    })();
+  </script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </button>
+</body>
+</html>

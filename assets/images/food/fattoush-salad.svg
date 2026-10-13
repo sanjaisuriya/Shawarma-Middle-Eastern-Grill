@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="500" height="375">
+  <rect width="500" height="375" fill="#FAF6F0"/>
+  <circle cx="250" cy="180" r="115" fill="#FFFFFF" stroke="#E6DEC3" stroke-width="4"/>
+  <circle cx="250" cy="180" r="98" fill="#C8E6C9"/> <!-- Green Herbs & Crispy Pita -->
+  <polygon points="210,160 240,140 250,175" fill="#D97724"/>
+  <polygon points="270,180 300,160 280,210" fill="#D97724"/>
+  <circle cx="230" cy="190" r="10" fill="#D32F2F"/>
+  <text x="250" y="320" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#1E1E24" text-anchor="middle">Garden Fresh Fattoush</text>
+  <text x="250" y="345" font-family="'Outfit', sans-serif" font-size="13" fill="#C83E2B" text-anchor="middle">Radish, Mint, Sumac Vinaigrette &amp; Toasted Pita</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="500" height="375">
+  <rect width="500" height="375" fill="#FAF6F0"/>
+  <circle cx="250" cy="180" r="120" fill="#FFFFFF" stroke="#E6DEC3" stroke-width="4"/>
+  <circle cx="250" cy="180" r="100" fill="#E6DEC3"/> <!-- Smooth Chickpea Hummus -->
+  <!-- Swirl of Olive Oil & Paprika -->
+  <path d="M 190 180 C 190 220, 310 220, 310 180 C 310 140, 210 150, 250 180" stroke="#7CB342" stroke-width="12" fill="none"/>
+  <circle cx="250" cy="180" r="12" fill="#C83E2B"/> <!-- Paprika & Whole Chickpeas -->
+  <text x="250" y="320" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#1E1E24" text-anchor="middle">Artisanal Creamy Hummus</text>
+  <text x="250" y="345" font-family="'Outfit', sans-serif" font-size="13" fill="#C83E2B" text-anchor="middle">Chickpeas, Tahini, Extra Virgin Olive Oil</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+  <defs>
+    <linearGradient id="goldGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4C463"/>
+      <stop offset="100%" stop-color="#E5A93B"/>
+    </linearGradient>
+    <linearGradient id="redGradL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5533D"/>
+      <stop offset="100%" stop-color="#C83E2B"/>
+    </linearGradient>
+  </defs>
+  <!-- Flame & Spit Emblem -->
+  <g transform="translate(10, 5)">
+    <path d="M 25 5 C 35 15, 45 25, 40 40 C 35 55, 15 55, 10 40 C 5 25, 15 15, 25 5 Z" fill="url(#redGradL)"/>
+    <path d="M 25 15 C 30 22, 36 30, 32 40 C 28 50, 18 50, 15 40 C 12 30, 20 22, 25 15 Z" fill="url(#goldGradL)"/>
+    <!-- Skewer lines -->
+    <line x1="25" y1="2" x2="25" y2="58" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 18 20 Q 25 24 32 20" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M 16 28 Q 25 32 34 28" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M 17 36 Q 25 40 33 36" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Text -->
+  <text x="70" y="34" font-family="'Playfair Display', Georgia, serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="0.5">SHAWARMA</text>
+  <text x="70" y="52" font-family="'Outfit', sans-serif" font-weight="700" font-size="12" fill="#E5A93B" letter-spacing="2.5">&amp; MIDDLE EASTERN GRILL</text>
+</svg>

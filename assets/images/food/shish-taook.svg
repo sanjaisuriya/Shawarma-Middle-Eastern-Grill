@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="500" height="375">
+  <rect width="500" height="375" fill="#FAF6F0"/>
+  <ellipse cx="250" cy="200" rx="190" ry="130" fill="#FFFFFF" stroke="#E6DEC3" stroke-width="4"/>
+  <rect x="130" y="165" width="240" height="22" rx="11" fill="#E5A93B"/>
+  <rect x="130" y="195" width="240" height="22" rx="11" fill="#F4C463"/>
+  <rect x="130" y="225" width="240" height="22" rx="11" fill="#E5A93B"/>
+  <text x="250" y="320" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#1E1E24" text-anchor="middle">Saffron Shish Taook</text>
+  <text x="250" y="345" font-family="'Outfit', sans-serif" font-size="13" fill="#C83E2B" text-anchor="middle">Yogurt &amp; Garlic Marinated Chicken Cubes</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="500" height="375">
+  <rect width="500" height="375" fill="#FAF6F0"/>
+  <rect x="120" y="110" width="260" height="150" rx="15" fill="#E5A93B" stroke="#B87333" stroke-width="4"/>
+  <!-- Diamond Baklava cuts -->
+  <polygon points="170,140 200,120 230,140 200,160" fill="#F4C463" stroke="#8D230F" stroke-width="2"/>
+  <polygon points="230,140 260,120 290,140 260,160" fill="#F4C463" stroke="#8D230F" stroke-width="2"/>
+  <polygon points="290,140 320,120 350,140 320,160" fill="#F4C463" stroke="#8D230F" stroke-width="2"/>
+  <polygon points="200,160 230,140 260,160 230,180" fill="#2E7D32" stroke="#8D230F" stroke-width="2"/> <!-- Pistachio top -->
+  <text x="250" y="320" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#1E1E24" text-anchor="middle">Pistachio Honey Baklava</text>
+  <text x="250" y="345" font-family="'Outfit', sans-serif" font-size="13" fill="#C83E2B" text-anchor="middle">Flaky Phyllo Pastry &amp; Orange Blossom Syrup</text>
+</svg>

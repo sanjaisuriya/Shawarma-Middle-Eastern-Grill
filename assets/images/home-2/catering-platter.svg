@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <rect width="600" height="450" fill="#1C1C21"/>
+  <!-- Grand Copper Tray -->
+  <ellipse cx="300" cy="235" rx="260" ry="160" fill="#B87333" stroke="#E5A93B" stroke-width="6"/>
+  <ellipse cx="300" cy="235" rx="240" ry="140" fill="#F4C463"/> <!-- Saffron Rice Bed -->
+  <!-- Rice texture dots -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <circle cx="200" cy="220" r="3"/><circle cx="240" cy="250" r="4"/><circle cx="320" cy="210" r="3"/>
+    <circle cx="380" cy="260" r="4"/><circle cx="420" cy="220" r="3"/><circle cx="260" cy="190" r="3"/>
+  </g>
+  <!-- Grilled Skewers Stack on Platter -->
+  <rect x="180" y="210" width="240" height="20" rx="10" fill="#701A0B"/>
+  <rect x="200" y="240" width="220" height="20" rx="10" fill="#C83E2B"/>
+  <rect x="160" y="270" width="260" height="20" rx="10" fill="#8D230F"/>
+  <!-- Hummus & Garlic Bowls on sides -->
+  <circle cx="100" cy="235" r="40" fill="#FFFFFF" stroke="#E5A93B" stroke-width="3"/>
+  <circle cx="100" cy="235" r="32" fill="#E6DEC3"/> <!-- Hummus -->
+  <circle cx="500" cy="235" r="40" fill="#FFFFFF" stroke="#E5A93B" stroke-width="3"/>
+  <circle cx="500" cy="235" r="32" fill="#FFFFFF"/> <!-- Toum -->
+  <text x="300" y="420" font-family="'Playfair Display', serif" font-weight="700" font-size="22" fill="#E5A93B" text-anchor="middle">Royal Sultan Catering Feast Platter</text>
+</svg>

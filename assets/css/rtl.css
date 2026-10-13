@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Shawarma & Middle Eastern Grill - RTL (Right-To-Left) Stylesheet
+   ========================================================================== */
+
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+  text-align: right;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6 {
+  font-family: var(--font-arabic);
+}
+
+[dir="rtl"] .food-card-price-badge {
+  right: auto;
+  left: 14px;
+}
+
+[dir="rtl"] .pricing-features-list {
+  text-align: right;
+}
+
+[dir="rtl"] .floating-experience-badge {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .icon-flip-rtl {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}

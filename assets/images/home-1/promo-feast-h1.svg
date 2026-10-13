@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2C1814" />
+      <stop offset="60%" stop-color="#1B1718" />
+      <stop offset="100%" stop-color="#111113" />
+    </radialGradient>
+    <radialGradient id="trayGradient" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#D99B4B" />
+      <stop offset="70%" stop-color="#8C4A1E" />
+      <stop offset="100%" stop-color="#4E230B" />
+    </radialGradient>
+    <linearGradient id="skewerChar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C2D19" />
+      <stop offset="40%" stop-color="#C83E2B" />
+      <stop offset="70%" stop-color="#6B1D0E" />
+      <stop offset="100%" stop-color="#421006" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="16" fill="url(#bgGlow)"/>
+
+  <!-- Grand Middle Eastern Serving Platter -->
+  <ellipse cx="400" cy="275" rx="330" ry="165" fill="url(#trayGradient)" stroke="#E5A93B" stroke-width="4"/>
+  <ellipse cx="400" cy="275" rx="305" ry="145" fill="#241B16" stroke="#C83E2B" stroke-width="2"/>
+  <ellipse cx="400" cy="275" rx="285" ry="130" fill="#F0C366" opacity="0.88"/> <!-- Spiced Saffron Rice Bed -->
+
+  <!-- Warm Saj Breads on sides -->
+  <ellipse cx="190" cy="275" rx="75" ry="48" fill="#E8D1B0" stroke="#C8A578" stroke-width="2" transform="rotate(-12 190 275)"/>
+  <ellipse cx="610" cy="275" rx="75" ry="48" fill="#E8D1B0" stroke="#C8A578" stroke-width="2" transform="rotate(12 610 275)"/>
+
+  <!-- Artisanal Dips Bowls (Hummus & Toum) -->
+  <circle cx="210" cy="235" r="48" fill="#FCFAF7" stroke="#E5A93B" stroke-width="3"/>
+  <circle cx="210" cy="235" r="40" fill="#EADBB6"/>
+  <ellipse cx="210" cy="235" rx="14" ry="10" fill="#8F8722" opacity="0.7"/> <!-- Olive oil swirl -->
+
+  <circle cx="590" cy="235" r="48" fill="#FCFAF7" stroke="#E5A93B" stroke-width="3"/>
+  <circle cx="590" cy="235" r="40" fill="#FFFFFF"/>
+
+  <!-- Charcoal Grilled Meat Skewers Stack -->
+  <rect x="250" y="230" width="300" height="22" rx="11" fill="url(#skewerChar)"/>
+  <rect x="235" y="260" width="330" height="24" rx="12" fill="#5E1B0D"/>
+  <rect x="260" y="292" width="280" height="22" rx="11" fill="url(#skewerChar)"/>
+
+  <!-- Carved Shawarma Cuts -->
+  <g fill="#A33718">
+    <ellipse cx="320" cy="325" rx="28" ry="12" fill="#75210C"/>
+    <ellipse cx="370" cy="330" rx="32" ry="14" fill="#9C3014"/>
+    <ellipse cx="420" cy="332" rx="30" ry="13" fill="#82240D"/>
+    <ellipse cx="470" cy="328" rx="32" ry="14" fill="#9C3014"/>
+  </g>
+
+  <!-- Pickled Veggies & Charred Tomatoes -->
+  <circle cx="280" cy="215" r="14" fill="#C8231A"/>
+  <circle cx="520" cy="215" r="14" fill="#C8231A"/>
+  <rect x="340" y="205" width="22" height="8" rx="3" fill="#BF2B75"/>
+  <rect x="450" y="205" width="20" height="8" rx="3" fill="#BF2B75"/>
+
+  <!-- Top Title Overlay -->
+  <rect x="180" y="28" width="440" height="44" rx="22" fill="#141418" stroke="#E5A93B" stroke-width="1.5"/>
+  <text x="400" y="56" font-family="sans-serif" font-size="19" font-weight="bold" fill="#E5A93B" text-anchor="middle">WEEKEND FAMILY GRILL FEAST</text>
+</svg>

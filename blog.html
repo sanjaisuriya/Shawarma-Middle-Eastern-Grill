@@ -2,6 +2,16 @@
 <html lang="en" data-bs-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stories, Flavours &amp; Grill Tips | Shawarma &amp; Middle Eastern Grill</title>
   <meta name="description" content="Explore culinary stories, master vertical spit shawarma secrets, wood-fired grilling guides, artisan saj bread baking, and Levant spice journal from our master pitmasters.">
@@ -82,7 +92,7 @@
   </nav>
 
   <!-- Page Banner: Stories, Flavours & Grill Tips -->
-  <section class="page-banner page-banner-blog">
+  <section class="page-banner page-banner-blog" style="background-image: url('assets/images/banners/banner-blog.jpg'); background-position: center 52%; background-size: cover;">
     <div class="container">
       <div class="max-w-700 mx-auto text-center">
         <span class="hero-badge mb-3">📖 Culinary Journal &amp; Grill Master Chronicles</span>
@@ -784,7 +794,7 @@
        ═══════════════════════════════════════════════════════════════════════ -->
   <section id="grillClub" class="grill-club-banner py-5">
     <div class="container">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center g-4 g-lg-5">
 
         <!-- Left: copy & perks -->
         <div class="col-lg-6">

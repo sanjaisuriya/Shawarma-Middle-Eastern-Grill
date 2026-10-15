@@ -5,6 +5,16 @@
 <head>
 
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -166,7 +176,7 @@
 
   <!-- Page Banner -->
 
-  <section class="page-banner page-banner-catering">
+  <section class="page-banner page-banner-catering" style="background-image: url('assets/images/banners/banner-catering.jpg'); background-position: center 45%; background-size: cover;">
 
     <div class="container">
 
@@ -720,7 +730,7 @@
 
     <div class="container py-2">
 
-      <div class="row g-5 align-items-center">
+      <div class="row g-4 g-lg-5 align-items-center">
 
         <div class="col-lg-6">
 

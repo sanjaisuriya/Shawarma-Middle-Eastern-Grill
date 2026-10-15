@@ -2,6 +2,16 @@
 <html lang="en" data-bs-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Page Not Found | Shawarma &amp; Middle Eastern Grill</title>
   <meta name="description" content="The page you are looking for cannot be found. Return to our restaurant menu or home page.">
@@ -82,7 +92,7 @@
   </nav>
 
   <!-- 404 Error Content -->
-  <div class="error-page-wrap">
+  <div class="error-page-wrap" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.93) 0%, rgba(248, 245, 240, 0.95) 100%), url('assets/images/banners/banner-pricing.jpg') center/cover no-repeat;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-7">

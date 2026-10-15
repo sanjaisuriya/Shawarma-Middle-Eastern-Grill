@@ -1,10 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" data-bs-theme="light" dir="ltr">
 
 <head>
 
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -166,7 +176,7 @@
 
   <!-- Page Banner -->
 
-  <section class="page-banner page-banner-pricing">
+  <section class="page-banner page-banner-pricing" style="background-image: url('assets/images/banners/banner-pricing.jpg'); background-position: center 50%; background-size: cover;">
 
     <div class="container">
 
@@ -412,9 +422,9 @@
 
 
 
-      <div class="table-responsive card p-4 border border-color rounded-4 bg-surface shadow-sm">
-
-        <table class="table table-hover align-middle mb-0">
+      <div class="card p-3 p-md-4 border border-color rounded-4 bg-surface shadow-sm overflow-hidden">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
 
           <thead class="table-dark">
 
@@ -564,8 +574,8 @@
 
           </tbody>
 
-        </table>
-
+          </table>
+        </div>
       </div>
 
     </div>

@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // In RTL mode: Show RTL text direction icon (lines aligned right with left arrow), clicking will switch to LTR
         btn.innerHTML = `
           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="direction-icon">
-            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5zm0 3.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1 0-1h8.5a.5.5 0 0 1 .5.5zm0 3.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5zm0 3.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1 0-1h8.5a.5.5 0 0 1 .5.5zM2.854 5.646a.5.5 0 0 1 0 .708L1.707 7.5H6.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2a.5.5 0 0 1 .708 0z"/>
+            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5zm0 3.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1 0-1h8.5a.5.5 0 0 1 .5.5zm0 3.5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5zm0 3.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1 0-1h8.5a.5.5 0 0 1 .5.5zM2.854 5.646a.5.5 0 0 1 0 .708L1.707 7.5H6.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2a.5.5 0 0 1 .708 0z"/>
           </svg>`;
         btn.setAttribute('aria-label', 'Switch to Left-to-Right (LTR) layout');
         btn.setAttribute('title', 'Switch to LTR');
@@ -96,16 +96,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Cross-tab theme and direction synchronization
+  window.addEventListener('storage', function (e) {
+    if (e.key === 'sg_theme' && e.newValue) {
+      setTheme(e.newValue);
+    }
+    if (e.key === 'sg_dir' && e.newValue) {
+      setDirection(e.newValue);
+    }
+  });
+
   // --- 3. Sticky Navbar Shadow on Scroll ---
   const navbar = document.querySelector('.navbar-custom');
   if (navbar) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 40) {
+    const updateNavbarSticky = () => {
+      if (window.scrollY > 20) {
         navbar.classList.add('is-sticky');
       } else {
         navbar.classList.remove('is-sticky');
       }
-    });
+    };
+    window.addEventListener('scroll', updateNavbarSticky, { passive: true });
+    updateNavbarSticky();
   }
 
   // --- 4. Close Mobile Menu on Nav Item Click ---

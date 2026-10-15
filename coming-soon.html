@@ -2,6 +2,16 @@
 <html lang="en" data-bs-theme="dark" dir="ltr">
 <head>
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opening Soon | Downtown Location | Shawarma &amp; Middle Eastern Grill</title>
   <meta name="description" content="Our second flagship location is opening soon in Downtown! Sign up for exclusive grand opening invitations and free food tasting passes.">
@@ -23,7 +33,7 @@
   <header class="p-3 sticky-header">
     <div class="container d-flex justify-content-between align-items-center">
       <a href="index.html">
-        <img src="assets/images/logo/logo-light.svg" alt="Shawarma &amp; Grill Logo" style="height: 44px;" onerror="this.onerror=null; this.src='assets/images/logo/logo-light.svg';">
+        <img src="assets/images/logo/logo-dark.svg" alt="Shawarma &amp; Grill Logo" class="navbar-brand-logo theme-logo-light" style="height: 44px;" onerror="this.onerror=null; this.src='assets/images/logo/logo-dark.svg';">
       </a>
       <div class="header-actions-group">
         <!-- Theme Toggle Icon Button -->

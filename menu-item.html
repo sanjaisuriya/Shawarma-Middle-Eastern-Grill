@@ -2,6 +2,16 @@
 <html lang="en" data-bs-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Charcoal Mixed Grill Platter | Dish Details</title>
   <meta name="description" content="View dish details for our Royal Charcoal Mixed Grill Platter: hand-cut lamb kebabs, saffron shish taook, beef shawarma, saffron rice, and fresh meze.">
@@ -81,19 +91,71 @@
     </div>
   </nav>
 
+  <!-- Early Dish Prefill Script (Guarantees zero-flicker exact image & related banner) -->
+  <script>
+    (function () {
+      try {
+        var key = new URLSearchParams(window.location.search).get('dish') || new URLSearchParams(window.location.search).get('id');
+        if (!key && window.location.hash) {
+          var h = window.location.hash.replace(/^#/, '');
+          key = h.indexOf('=') !== -1 ? (new URLSearchParams(h).get('dish') || new URLSearchParams(h).get('id')) : h;
+        }
+        var map = {
+          'classic-chicken-saj-shawarma': { name: 'Classic Chicken Saj Shawarma', img: 'assets/images/food/classic-chicken-saj-shawarma.jpg', banner: 'assets/images/banners/banner-chicken-saj-shawarma.jpg', price: '₹14.50' },
+          'prime-beef-lamb-saj-wrap': { name: 'Prime Beef & Lamb Saj Wrap', img: 'assets/images/food/prime-beef-lamb-saj-wrap.jpg', banner: 'assets/images/banners/banner-beef-lamb-saj-wrap.jpg', price: '₹15.95' },
+          'sultan-double-shawarma-box': { name: 'Sultan Double Meat Shawarma Box Wrap', img: 'assets/images/food/sultan-double-shawarma-box.jpg', banner: 'assets/images/banners/banner-sultan-shawarma-box.jpg', price: '₹17.50' },
+          'crispy-herb-falafel-saj-wrap': { name: 'Crispy Herb Falafel Saj Wrap', img: 'assets/images/food/crispy-herb-falafel-platter.jpg', banner: 'assets/images/food/crispy-herb-falafel-platter.jpg', price: '₹12.50' },
+          'sultan-mixed-charcoal-kebab-platter': { name: 'Sultan Mixed Charcoal Kebab Platter', img: 'assets/images/food/sultan-mixed-grill-platter.jpg', banner: 'assets/images/food/sizzling-flame-seared-specialties-table.jpg', price: '₹26.50' },
+          'charcoal-shish-tawook-skewer-platter': { name: 'Charcoal Shish Tawook Skewer Platter', img: 'assets/images/home-2/platter-grilled-chicken.jpg', banner: 'assets/images/home-2/platter-grilled-chicken.jpg', price: '₹21.00' },
+          'aleppo-spiced-lamb-kofta-platter': { name: 'Aleppo Spiced Lamb Kofta Platter', img: 'assets/images/food/charcoal-lamb-kebabs.jpg', banner: 'assets/images/banners/banner-charcoal-lamb-kebabs.jpg', price: '₹22.50' },
+          'prime-lamb-chops-rosemary-sumac': { name: 'Prime Lamb Chops with Rosemary & Sumac', img: 'assets/images/home-2/platter-artisan-kebabs.jpg', banner: 'assets/images/home-2/platter-artisan-kebabs.jpg', price: '₹28.00' },
+          'creamy-labneh-zaatar-olives': { name: "Creamy Labneh with Za'atar & Olives", img: 'assets/images/food/creamy-zaatar-labneh.jpg', banner: 'assets/images/food/creamy-zaatar-labneh.jpg', price: '₹8.50' },
+          'spicy-batata-harra-potatoes': { name: 'Spicy Batata Harra Crispy Potatoes', img: 'assets/images/food/spicy-batata-harra.jpg', banner: 'assets/images/food/spicy-batata-harra.jpg', price: '₹7.95' },
+          'fresh-stone-baked-pita-basket': { name: 'Fresh Stone-Baked Pita Bread Basket', img: 'assets/images/food/stone-baked-pita-basket.jpg', banner: 'assets/images/food/stone-baked-pita-basket.jpg', price: '₹4.50' },
+          'beirut-silk-hummus-olive-oil': { name: 'Beirut Silk Hummus with Virgin Olive Oil', img: 'assets/images/food/artisanal-creamy-hummus.jpg', banner: 'assets/images/banners/banner-artisanal-creamy-hummus.jpg', price: '₹8.95' },
+          'fire-roasted-moutabal-baba-ghanoush': { name: 'Fire-Roasted Moutabal Baba Ghanoush', img: 'assets/images/food/moutabal-baba-ghanoush.jpg', banner: 'assets/images/food/moutabal-baba-ghanoush.jpg', price: '₹9.50' },
+          'authentic-lebanese-garden-tabbouleh': { name: 'Authentic Lebanese Garden Tabbouleh', img: 'assets/images/menu/tabbouleh-bowl.jpg', banner: 'assets/images/menu/tabbouleh-bowl.jpg', price: '₹9.00' },
+          'royal-pistachio-baklava-selection': { name: 'Royal Pistachio Baklava Selection', img: 'assets/images/menu/chef-fav-baklava-selection.jpg', banner: 'assets/images/menu/chef-fav-baklava-selection.jpg', price: '₹8.50' },
+          'warm-cheese-kunafa-kataifi': { name: 'Warm Cheese Kunafa with Kataifi & Pistachios', img: 'assets/images/food/warm-cheese-kunafa.jpg', banner: 'assets/images/food/warm-cheese-kunafa.jpg', price: '₹10.50' },
+          'traditional-cardamom-arabic-coffee': { name: 'Traditional Cardamom Arabic Coffee (Qahwa)', img: 'assets/images/menu/arabic-coffee.jpg', banner: 'assets/images/menu/arabic-coffee.jpg', price: '₹4.95' },
+          'fresh-mint-lemonade-limonana': { name: 'Fresh Mint Lemonade (Limonana)', img: 'assets/images/food/fresh-mint-limonana.jpg', banner: 'assets/images/food/fresh-mint-limonana.jpg', price: '₹5.50' }
+        };
+        map['prime-beef-amp-lamb-saj-wrap'] = map['prime-beef-lamb-saj-wrap'];
+        map['artisanal-creamy-hummus'] = map['beirut-silk-hummus-olive-oil'];
+        map['charcoal-lamb-kebabs'] = map['aleppo-spiced-lamb-kofta-platter'];
+        map['sultan-mixed-grill-platter'] = map['sultan-mixed-charcoal-kebab-platter'];
+        map['warm-cheese-kunafa'] = map['warm-cheese-kunafa-kataifi'];
+        map['creamy-zaatar-labneh'] = map['creamy-labneh-zaatar-olives'];
+
+        var stored = null;
+        try {
+          var s = sessionStorage.getItem('sg_selected_dish') || localStorage.getItem('sg_selected_dish');
+          if (s) stored = JSON.parse(s);
+        } catch (e) {}
+
+        var normKey = key ? key.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : (stored && stored.id ? stored.id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : '');
+        var item = (normKey && map[normKey]) || (stored ? { name: stored.name, img: stored.img, banner: stored.img, price: stored.price } : null);
+
+        if (item && item.banner) {
+          document.write('<style>#dishPageBanner { background-image: url("' + item.banner + '") !important; background-position: center center !important; background-size: cover !important; }</style>');
+        }
+      } catch (err) {}
+    })();
+  </script>
+
   <!-- Page Banner -->
-  <section class="page-banner page-banner-dish">
+  <section class="page-banner page-banner-dish" id="dishPageBanner" style="background-image: url('assets/images/banners/banner-chicken-saj-shawarma.jpg'); background-position: center center;">
     <div class="container">
       <div class="max-w-700 mx-auto text-center">
         <span class="hero-badge mb-3">🔥 Chef's Signature Dish</span>
-        <h1 class="display-4 font-heading text-white mb-3">Royal Charcoal Mixed Grill Platter</h1>
-        <p class="lead text-light opacity-90 mb-4">An opulent combination of tender lamb chops, shish kabab, chicken tawook, and slow-roasted beef shawarma over fragrant saffron rice.</p>
+        <h1 class="display-4 font-heading text-white mb-3" id="bannerDishTitle">Classic Chicken Saj Shawarma</h1>
+        <p class="lead text-light opacity-90 mb-4" id="bannerDishDesc">24-hour cardamom-marinated chicken breast, whipped garlic toum, wild cucumber pickles, rolled in toasted saj bread.</p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
           <a href="#dishDetailCard" class="btn btn-spice">View Dish Recipe &amp; Specs</a>
           <a href="menu.html" class="btn btn-outline-gold text-white border-white">Browse Full Menu</a>
         </div>
         <div class="breadcrumb-custom mt-4">
-          <a href="index.html">Home</a> &bull; <a href="menu.html">Menu</a> &bull; <span>Royal Charcoal Mixed Grill</span>
+          <a href="index.html">Home</a> &bull; <a href="menu.html">Menu</a> &bull; <span id="breadcrumbDishName">Classic Chicken Saj Shawarma</span>
         </div>
       </div>
     </div>
@@ -102,48 +164,103 @@
   <!-- Item Details Content -->
   <section class="py-5">
     <div class="container py-4">
-      <div class="row g-5">
+      <div class="row g-4 g-lg-5">
         <!-- Dish Image Showcase -->
         <div class="col-lg-6">
           <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-card">
-            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null; this.src='assets/images/food/mixed-grill-detail.svg';" alt="Royal Charcoal Mixed Grill Platter" class="img-fluid">
+            <img id="dishMainImg" src="assets/images/food/classic-chicken-saj-shawarma.jpg" onerror="this.onerror=null; this.src='assets/images/food/chicken-shawarma.svg';" alt="Classic Chicken Saj Shawarma" class="img-fluid w-100 object-fit-cover rounded-4" style="max-height: 520px;">
           </div>
         </div>
 
         <!-- Dish Meta & Customization -->
         <div class="col-lg-6">
-          <div class="d-flex align-items-center gap-2 mb-2">
+          <div class="d-flex align-items-center gap-2 mb-2" id="dishBadgesContainer">
             <span class="badge-dietary badge-halal">100% Halal</span>
-            <span class="badge-dietary badge-gf">Gluten-Free Option</span>
+            <span class="badge-dietary badge-spicy">Mild Spice</span>
           </div>
 
-          <h1 class="display-5 font-heading mb-2">Royal Charcoal Mixed Grill Platter</h1>
-          <div class="fs-2 font-heading fw-bold text-spice mb-3">₹28.99</div>
+          <h1 class="display-5 font-heading mb-2" id="dishMainTitle">Classic Chicken Saj Shawarma</h1>
+          <div class="fs-2 font-heading fw-bold text-spice mb-3" id="dishMainPrice">₹14.50</div>
+
+          <script>
+            (function () {
+              try {
+                var key = new URLSearchParams(window.location.search).get('dish') || new URLSearchParams(window.location.search).get('id');
+                if (!key && window.location.hash) {
+                  var h = window.location.hash.replace(/^#/, '');
+                  key = h.indexOf('=') !== -1 ? (new URLSearchParams(h).get('dish') || new URLSearchParams(h).get('id')) : h;
+                }
+                var map = {
+                  'classic-chicken-saj-shawarma': { name: 'Classic Chicken Saj Shawarma', img: 'assets/images/food/classic-chicken-saj-shawarma.jpg', price: '₹14.50' },
+                  'prime-beef-lamb-saj-wrap': { name: 'Prime Beef & Lamb Saj Wrap', img: 'assets/images/food/prime-beef-lamb-saj-wrap.jpg', price: '₹15.95' },
+                  'sultan-double-shawarma-box': { name: 'Sultan Double Meat Shawarma Box Wrap', img: 'assets/images/food/sultan-double-shawarma-box.jpg', price: '₹17.50' },
+                  'crispy-herb-falafel-saj-wrap': { name: 'Crispy Herb Falafel Saj Wrap', img: 'assets/images/food/crispy-herb-falafel-platter.jpg', price: '₹12.50' },
+                  'sultan-mixed-charcoal-kebab-platter': { name: 'Sultan Mixed Charcoal Kebab Platter', img: 'assets/images/food/sultan-mixed-grill-platter.jpg', price: '₹26.50' },
+                  'charcoal-shish-tawook-skewer-platter': { name: 'Charcoal Shish Tawook Skewer Platter', img: 'assets/images/home-2/platter-grilled-chicken.jpg', price: '₹21.00' },
+                  'aleppo-spiced-lamb-kofta-platter': { name: 'Aleppo Spiced Lamb Kofta Platter', img: 'assets/images/food/charcoal-lamb-kebabs.jpg', price: '₹22.50' },
+                  'prime-lamb-chops-rosemary-sumac': { name: 'Prime Lamb Chops with Rosemary & Sumac', img: 'assets/images/home-2/platter-artisan-kebabs.jpg', price: '₹28.00' },
+                  'creamy-labneh-zaatar-olives': { name: "Creamy Labneh with Za'atar & Olives", img: 'assets/images/food/creamy-zaatar-labneh.jpg', price: '₹8.50' },
+                  'spicy-batata-harra-potatoes': { name: 'Spicy Batata Harra Crispy Potatoes', img: 'assets/images/food/spicy-batata-harra.jpg', price: '₹7.95' },
+                  'fresh-stone-baked-pita-basket': { name: 'Fresh Stone-Baked Pita Bread Basket', img: 'assets/images/food/stone-baked-pita-basket.jpg', price: '₹4.50' },
+                  'beirut-silk-hummus-olive-oil': { name: 'Beirut Silk Hummus with Virgin Olive Oil', img: 'assets/images/food/artisanal-creamy-hummus.jpg', price: '₹8.95' },
+                  'fire-roasted-moutabal-baba-ghanoush': { name: 'Fire-Roasted Moutabal Baba Ghanoush', img: 'assets/images/food/moutabal-baba-ghanoush.jpg', price: '₹9.50' },
+                  'authentic-lebanese-garden-tabbouleh': { name: 'Authentic Lebanese Garden Tabbouleh', img: 'assets/images/menu/tabbouleh-bowl.jpg', price: '₹9.00' },
+                  'royal-pistachio-baklava-selection': { name: 'Royal Pistachio Baklava Selection', img: 'assets/images/menu/chef-fav-baklava-selection.jpg', price: '₹8.50' },
+                  'warm-cheese-kunafa-kataifi': { name: 'Warm Cheese Kunafa with Kataifi & Pistachios', img: 'assets/images/food/warm-cheese-kunafa.jpg', price: '₹10.50' },
+                  'traditional-cardamom-arabic-coffee': { name: 'Traditional Cardamom Arabic Coffee (Qahwa)', img: 'assets/images/menu/arabic-coffee.jpg', price: '₹4.95' },
+                  'fresh-mint-lemonade-limonana': { name: 'Fresh Mint Lemonade (Limonana)', img: 'assets/images/food/fresh-mint-limonana.jpg', price: '₹5.50' }
+                };
+                var stored = null;
+                try {
+                  var s = sessionStorage.getItem('sg_selected_dish') || localStorage.getItem('sg_selected_dish');
+                  if (s) stored = JSON.parse(s);
+                } catch (e) {}
+
+                var normKey = key ? key.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : (stored && stored.id ? stored.id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : '');
+                var item = (normKey && map[normKey]) || stored;
+                if (item) {
+                  var imgEl = document.getElementById('dishMainImg');
+                  if (imgEl && item.img) {
+                    imgEl.src = item.img;
+                    if (item.name) imgEl.alt = item.name;
+                  }
+                  var titleEl = document.getElementById('dishMainTitle');
+                  if (titleEl && item.name) titleEl.textContent = item.name;
+                  var bannerTitle = document.getElementById('bannerDishTitle');
+                  if (bannerTitle && item.name) bannerTitle.textContent = item.name;
+                  var breadcrumb = document.getElementById('breadcrumbDishName');
+                  if (breadcrumb && item.name) breadcrumb.textContent = item.name;
+                  var priceEl = document.getElementById('dishMainPrice');
+                  if (priceEl && item.price) priceEl.textContent = item.price;
+                }
+              } catch (err) {}
+            })();
+          </script>
 
           <!-- Spice Meter -->
-          <div class="d-flex align-items-center gap-2 mb-3">
+          <div class="d-flex align-items-center gap-2 mb-3" id="dishSpiceMeter">
             <span class="fw-semibold text-muted">Spice Intensity:</span>
-            <div class="spice-meter" title="Medium Spice (3 out of 5)">
+            <div class="spice-meter" title="Mild Spice (2 out of 5)">
               <span class="spice-chili active">🌶️</span>
               <span class="spice-chili active">🌶️</span>
-              <span class="spice-chili active">🌶️</span>
+              <span class="spice-chili">🌶️</span>
               <span class="spice-chili">🌶️</span>
               <span class="spice-chili">🌶️</span>
             </div>
-            <span class="small text-muted">(Medium Spice)</span>
+            <span class="small text-muted" id="dishSpiceLabel">(Mild Spice)</span>
           </div>
 
-          <p class="text-muted leading-relaxed mb-4">An extravagant feast for meat lovers! Featuring one skewer of spiced hand-minced lamb kebab, one skewer of saffron shish taook, and a generous heap of sliced beef shawarma. Served over a bed of fragrant cardamom saffron rice with roasted tomatoes, sumac onions, garlic toum, and artisanal hummus.</p>
+          <p class="text-muted leading-relaxed mb-4" id="dishMainDesc">24-hour cardamom-marinated chicken breast, whipped garlic toum, wild cucumber pickles, rolled in toasted saj bread and grilled to crispy perfection on an authentic dome saj oven.</p>
 
           <!-- Key Ingredients -->
           <div class="mb-4">
             <h5 class="font-heading mb-2">Key Ingredients</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Prime Halal Beef &amp; Lamb</span>
-              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Cardamom &amp; Cumin</span>
+            <div class="d-flex flex-wrap gap-2" id="dishKeyIngredients">
+              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Spit-Carved Cardamom Chicken</span>
               <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Whipped Garlic Toum</span>
-              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Saffron Rice</span>
-              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Sumac &amp; Parsley Salad</span>
+              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Wild Levantine Pickles</span>
+              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Hand-Stretched Saj Flatbread</span>
+              <span class="badge bg-surface-alt text-main border border-color px-3 py-2">Golden Batata Fries</span>
             </div>
           </div>
 
@@ -176,49 +293,6 @@
             </form>
           </div>
 
-        </div>
-      </div>
-
-      <!-- Related Items Grid -->
-      <div class="mt-5 pt-4 border-top border-color">
-        <h3 class="font-heading mb-4">Pair Perfectly With</h3>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="food-card">
-              <div class="food-card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null; this.src='assets/images/food/hummus-rel.svg';" alt="Artisanal Creamy Hummus">
-                <span class="food-card-price-badge">₹8.99</span>
-              </div>
-              <div class="food-card-body">
-                <h4 class="food-card-title"><a href="menu-item.html">Artisanal Creamy Hummus</a></h4>
-                <p class="food-card-desc">Whipped chickpeas, tahini, lemon juice, extra virgin olive oil.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="food-card">
-              <div class="food-card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null; this.src='assets/images/food/fattoush-rel.svg';" alt="Garden Fresh Fattoush">
-                <span class="food-card-price-badge">₹11.99</span>
-              </div>
-              <div class="food-card-body">
-                <h4 class="food-card-title"><a href="menu-item.html">Garden Fresh Fattoush</a></h4>
-                <p class="food-card-desc">Radishes, cucumbers, cherry tomatoes, mint, sumac dressing.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="food-card">
-              <div class="food-card-img-wrap">
-                <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null; this.src='assets/images/food/kunafa-rel.svg';" alt="Hot Cheese Kunafa">
-                <span class="food-card-price-badge">₹9.49</span>
-              </div>
-              <div class="food-card-body">
-                <h4 class="food-card-title"><a href="menu-item.html">Hot Nabulsi Kunafa</a></h4>
-                <p class="food-card-desc">Shredded kataifi pastry, melted cheese, rose syrup.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -287,6 +361,7 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/cart.js"></script>
+  <script src="assets/js/dish-details.js"></script>
   <!-- Back to Top Button -->
   <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">

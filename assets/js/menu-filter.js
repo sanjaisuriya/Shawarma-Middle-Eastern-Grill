@@ -5,45 +5,53 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  // --- 1. Category Filter Tabs ---
+  // --- 1. Category Filter Tabs & Combined Filter Engine ---
   const filterBtns = document.querySelectorAll('.filter-btn');
   const foodItems = document.querySelectorAll('.food-item-col');
+  const menuSearchInput = document.getElementById('menuSearchInput');
+  const dietaryCheckboxes = document.querySelectorAll('.dietary-filter-checkbox');
+  const resetBtn = document.getElementById('resetMenuFiltersBtn');
 
   if (filterBtns.length > 0 && foodItems.length > 0) {
     filterBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        // Update active tab button
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
         filterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
 
+        applyCombinedFilters();
+
         const filterValue = this.getAttribute('data-filter');
-
-        foodItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-
-          if (filterValue === 'all' || filterValue === category) {
-            item.style.display = 'block';
-            item.classList.add('animate-fadeIn');
-          } else {
-            item.style.display = 'none';
+        if (filterValue !== 'all') {
+          const target = document.getElementById(`category-${filterValue}`);
+          if (target && target.style.display !== 'none') {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
-        });
-
-        checkEmptyResults();
+        }
       });
     });
   }
 
   // --- 2. Menu Search Input & Dietary Checkboxes ---
-  const menuSearchInput = document.getElementById('menuSearchInput');
-  const dietaryCheckboxes = document.querySelectorAll('.dietary-filter-checkbox');
-
   if (menuSearchInput || dietaryCheckboxes.length > 0) {
     if (menuSearchInput) {
       menuSearchInput.addEventListener('input', applyCombinedFilters);
     }
     dietaryCheckboxes.forEach(cb => {
       cb.addEventListener('change', applyCombinedFilters);
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      if (menuSearchInput) menuSearchInput.value = '';
+      dietaryCheckboxes.forEach(cb => { cb.checked = false; });
+      const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if (allBtn) {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        allBtn.classList.add('active');
+      }
+      applyCombinedFilters();
     });
   }
 
@@ -63,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const ingredients = (item.querySelector('.food-card-ingredients')?.textContent || '').toLowerCase();
       const itemTags = (item.getAttribute('data-dietary') || '').toLowerCase().split(' ');
 
-      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      const matchesCategory = activeCategory === 'all' || category.split(' ').includes(activeCategory);
       const matchesSearch = !searchTerm || title.includes(searchTerm) || desc.includes(searchTerm) || ingredients.includes(searchTerm) || category.includes(searchTerm);
       const matchesDietary = activeDietary.length === 0 || activeDietary.every(tag => itemTags.includes(tag));
 
@@ -73,6 +81,28 @@ document.addEventListener('DOMContentLoaded', function () {
         item.style.display = 'none';
       }
     });
+
+    // Toggle category sections based on whether they contain visible dishes
+    const categorySections = document.querySelectorAll('.menu-category-section');
+    categorySections.forEach(section => {
+      const visibleInSection = section.querySelectorAll('.food-item-col:not([style*="display: none"])');
+      if (visibleInSection.length === 0) {
+        section.style.display = 'none';
+      } else {
+        section.style.display = 'block';
+      }
+    });
+
+    // Update results counter
+    const countEl = document.getElementById('menuResultsCount');
+    if (countEl) {
+      const visibleCount = Array.from(foodItems).filter(item => item.style.display !== 'none').length;
+      if (visibleCount === foodItems.length) {
+        countEl.textContent = `Showing all ${visibleCount} authentic dishes across 5 categories`;
+      } else {
+        countEl.textContent = `Showing ${visibleCount} of ${foodItems.length} dishes`;
+      }
+    }
 
     checkEmptyResults();
   }
@@ -88,6 +118,37 @@ document.addEventListener('DOMContentLoaded', function () {
       noResultsEl.style.display = 'none';
     }
   }
+
+  // --- 2.5 Ensure Card Click Saves Selected Dish Info For Details Page ---
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href*="menu-item.html"]');
+    if (link) {
+      const card = link.closest('.food-card');
+      if (card) {
+        const img = card.querySelector('img')?.getAttribute('src');
+        const title = card.querySelector('.food-card-title')?.textContent?.trim();
+        const price = card.querySelector('.food-card-bottom-price, .food-card-price, .text-spice')?.textContent?.trim();
+        const desc = card.querySelector('.food-card-desc')?.textContent?.trim();
+        const href = link.getAttribute('href') || '';
+        let dishId = '';
+        const match = href.match(/[?&]dish=([^&#]+)/);
+        if (match && match[1]) {
+          dishId = decodeURIComponent(match[1]);
+        }
+        if (title || img) {
+          const payload = JSON.stringify({
+            id: dishId || (title ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : ''),
+            name: title,
+            price: price,
+            img: img,
+            desc: desc
+          });
+          try { sessionStorage.setItem('sg_selected_dish', payload); } catch (err) {}
+          try { localStorage.setItem('sg_selected_dish', payload); } catch (err) {}
+        }
+      }
+    }
+  });
 
   // --- 3. Blog Category & Search Journal Filter Engine ---
   const blogSearchInput = document.getElementById('blogSearchInput');

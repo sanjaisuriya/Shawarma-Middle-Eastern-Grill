@@ -317,6 +317,46 @@
         e.preventDefault();
         openCartOffcanvas();
       }
+
+      // Capture clicked card info when navigating to menu-item.html
+      const detailsLink = e.target.closest('a[href*="menu-item.html"]');
+      if (detailsLink) {
+        const card = detailsLink.closest('.food-card');
+        if (card) {
+          const cardImg = card.querySelector('img')?.getAttribute('src');
+          const cardTitle = card.querySelector('.food-card-title')?.textContent?.trim();
+          const rawPrice = card.querySelector('.food-card-bottom-price, .food-card-price-badge, .food-card-price, .text-spice')?.textContent?.trim();
+          const cardDesc = card.querySelector('.food-card-desc')?.textContent?.trim();
+          const addBtn = card.querySelector('.add-to-cart-btn');
+
+          // Extract dish slug from href (e.g., menu-item.html?dish=...)
+          const href = detailsLink.getAttribute('href') || '';
+          let dishSlug = '';
+          const match = href.match(/[?&]dish=([^&#]+)/);
+          if (match && match[1]) {
+            dishSlug = decodeURIComponent(match[1]);
+          }
+          const id = dishSlug || (cardTitle ? cardTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : '') || addBtn?.getAttribute('data-id') || '';
+
+          if (cardTitle || cardImg) {
+            const payload = JSON.stringify({
+              id: id,
+              name: cardTitle,
+              price: rawPrice,
+              img: cardImg,
+              desc: cardDesc
+            });
+            try {
+              sessionStorage.setItem('sg_selected_dish', payload);
+              if (id) sessionStorage.setItem('sg_selected_dish_id', id);
+            } catch (err) {}
+            try {
+              localStorage.setItem('sg_selected_dish', payload);
+              if (id) localStorage.setItem('sg_selected_dish_id', id);
+            } catch (err) {}
+          }
+        }
+      }
     });
 
     // Handle Custom Dish Form on menu-item.html

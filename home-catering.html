@@ -2,6 +2,16 @@
 <html lang="en" data-bs-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catering &amp; Charcoal Grill Platters | Shawarma &amp; Middle Eastern Grill</title>
   <meta name="description" content="Grand Middle Eastern catering, artisan charcoal grill banquet platters, and full-service event dining for family gatherings, birthdays, weddings, and corporate lunches.">
@@ -88,16 +98,8 @@
   </nav>
 
   <!-- Hero Section: Catering & Grill Feast Focus -->
-  <section class="hero-section-home2">
+  <section class="hero-section-home2" style="background: linear-gradient(135deg, rgba(20, 18, 17, 0.94) 0%, rgba(38, 26, 23, 0.90) 50%, rgba(18, 16, 15, 0.96) 100%), url('assets/images/banners/banner-catering.jpg') center 45%/cover no-repeat;">
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 pb-2 border-bottom border-secondary border-opacity-25">
-        <span class="badge bg-olive-subtle text-olive border border-olive-subtle px-3 py-1 rounded-pill font-medium small d-inline-flex align-items-center gap-1">
-          <span aria-hidden="true">🍢</span> Home 2 &bull; Grand Catering &amp; Charcoal Grills
-        </span>
-        <div class="breadcrumb-custom text-light opacity-75 small">
-          <a href="index.html" class="text-gold font-medium text-decoration-none">Home</a> &bull; <span>Catering, Platters &amp; Event Orders</span>
-        </div>
-      </div>
 
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
@@ -126,13 +128,13 @@
           </div>
         </div>
 
-        <div class="col-lg-5">
-          <div class="hero-img-box shadow-lg rounded-4 overflow-hidden border border-warning border-opacity-25 position-relative">
+        <div class="col-lg-5 hero-media-col">
+          <div class="hero-img-box shadow-lg rounded-4 overflow-hidden border border-warning border-opacity-25">
             <img src="assets/images/home-2/hero-catering-banquet.jpg" alt="Lavish Middle Eastern catering banquet spread with charcoal skewers, yellow rice, hummus and mezze" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-            <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-dark bg-opacity-75 text-white backdrop-blur small d-flex justify-content-between align-items-center">
-              <span><strong class="text-gold">Live Pitmasters:</strong> On-Site Charcoal Stations Available</span>
-              <span class="badge bg-olive text-white">Full Service</span>
-            </div>
+          </div>
+          <div class="hero-catering-badge small">
+            <span><strong class="text-gold">Live Pitmasters:</strong> On-Site Charcoal Stations Available</span>
+            <span class="badge bg-olive text-white">Full Service</span>
           </div>
         </div>
       </div>
@@ -428,7 +430,7 @@
   <!-- Section 5: Events Catered & Service Capabilities -->
   <section class="py-5 bg-surface-alt">
     <div class="container py-4">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-5">
           <span class="section-subtitle">Full-Service Hospitality</span>
           <h2 class="section-title">Events We Cater With Pride</h2>

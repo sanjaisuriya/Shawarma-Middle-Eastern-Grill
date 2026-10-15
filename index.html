@@ -2,6 +2,16 @@
 <html lang="en" data-bs-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
+  <!-- Pre-render Theme & Direction Initializer (Flicker Prevention) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('sg_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('sg_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shawarma &amp; Middle Eastern Grill | Authentic Slow-Roasted Shawarma &amp; Meze</title>
   <meta name="description" content="Experience authentic Middle Eastern dining at Shawarma &amp; Middle Eastern Grill. Signature slow-roasted shawarma wraps, charcoal platters, fresh meze, and catering.">
@@ -205,14 +215,12 @@
                 <span class="badge-dietary badge-halal">Halal</span>
                 <span class="badge-dietary badge-spicy">Mild Spice</span>
               </div>
-              <h3 class="food-card-title"><a href="menu-item.html">Classic Chicken Saj Shawarma</a></h3>
+              <h3 class="food-card-title"><a href="menu-item.html?dish=classic-chicken-saj-shawarma">Classic Chicken Saj Shawarma</a></h3>
               <p class="food-card-desc">24-hour cardamom-marinated chicken breast, whipped garlic toum, wild cucumber pickles, rolled in toasted saj bread.</p>
-              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-wrap">
+              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-nowrap">
                 <span class="food-card-bottom-price">₹12.99</span>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="classic-chicken-saj-shawarma" data-name="Classic Chicken Saj Shawarma" data-price="12.99" data-img="assets/images/food/classic-chicken-saj-shawarma.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
-                  <a href="menu-item.html" class="btn btn-outline-spice btn-sm">Details</a>
-                </div>
+                <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="classic-chicken-saj-shawarma" data-name="Classic Chicken Saj Shawarma" data-price="12.99" data-img="assets/images/food/classic-chicken-saj-shawarma.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
+                <a href="menu-item.html?dish=classic-chicken-saj-shawarma" class="btn btn-outline-spice btn-sm">Details</a>
               </div>
             </div>
           </div>
@@ -228,14 +236,12 @@
               <div class="mb-2">
                 <span class="badge-dietary badge-halal">Halal</span>
               </div>
-              <h3 class="food-card-title"><a href="menu-item.html">Prime Beef &amp; Lamb Saj Wrap</a></h3>
+              <h3 class="food-card-title"><a href="menu-item.html?dish=prime-beef-lamb-saj-wrap">Prime Beef &amp; Lamb Saj Wrap</a></h3>
               <p class="food-card-desc">Tender beef tenderloin slices, parsley-sumac onion salad, grilled tomatoes, and rich toasted sesame tahini.</p>
-              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-wrap">
+              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-nowrap">
                 <span class="food-card-bottom-price">₹14.49</span>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="prime-beef-amp-lamb-saj-wrap" data-name="Prime Beef &amp; Lamb Saj Wrap" data-price="14.49" data-img="assets/images/food/prime-beef-lamb-saj-wrap.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
-                  <a href="menu-item.html" class="btn btn-outline-spice btn-sm">Details</a>
-                </div>
+                <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="prime-beef-amp-lamb-saj-wrap" data-name="Prime Beef &amp; Lamb Saj Wrap" data-price="14.49" data-img="assets/images/food/prime-beef-lamb-saj-wrap.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
+                <a href="menu-item.html?dish=prime-beef-lamb-saj-wrap" class="btn btn-outline-spice btn-sm">Details</a>
               </div>
             </div>
           </div>
@@ -252,14 +258,12 @@
                 <span class="badge-dietary badge-halal">Halal</span>
                 <span class="badge-dietary badge-spicy">Spicy Option</span>
               </div>
-              <h3 class="food-card-title"><a href="menu-item.html">Sultan Double Mixed Shawarma Box</a></h3>
+              <h3 class="food-card-title"><a href="menu-item.html?dish=sultan-double-shawarma-box">Sultan Double Mixed Shawarma Box</a></h3>
               <p class="food-card-desc">Combination of sliced chicken and beef shawarma over saffron rice, with side hummus, garlic toum, and pita chips.</p>
-              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-wrap">
+              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-nowrap">
                 <span class="food-card-bottom-price">₹17.99</span>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="sultan-double-mixed-shawarma-box" data-name="Sultan Double Mixed Shawarma Box" data-price="17.99" data-img="assets/images/food/sultan-double-shawarma-box.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
-                  <a href="menu-item.html" class="btn btn-outline-spice btn-sm">Details</a>
-                </div>
+                <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="sultan-double-mixed-shawarma-box" data-name="Sultan Double Mixed Shawarma Box" data-price="17.99" data-img="assets/images/food/sultan-double-shawarma-box.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
+                <a href="menu-item.html?dish=sultan-double-shawarma-box" class="btn btn-outline-spice btn-sm">Details</a>
               </div>
             </div>
           </div>
@@ -284,8 +288,8 @@
           </div>
         </div>
         <div class="col-lg-5 text-center">
-          <div class="position-relative d-inline-block">
-            <img src="assets/images/home-1/weekend-family-grill-feast.jpg" onerror="this.onerror=null; this.src='assets/images/home-1/promo-feast-h1.svg';" alt="Weekend Family Grill Feast - Shawarma Saj Wraps, Spiced Batata Harra Fries, Artisanal Hummus, Whipped Toum and Drinks" class="img-fluid rounded-4 shadow-lg border border-warning section-feature-img">
+          <div class="position-relative d-inline-block w-100" style="max-width: 520px;">
+            <img src="assets/images/home-1/weekend-family-grill-feast.jpg" onerror="this.onerror=null; this.src='assets/images/home-1/promo-feast-h1.svg';" alt="Weekend Family Grill Feast - Family sharing shawarma wraps, grilled kebabs, hummus, fries, and drinks" class="img-fluid rounded-4 shadow-lg border border-warning section-feature-img w-100" style="object-fit: cover; object-position: center;">
           </div>
         </div>
       </div>
@@ -298,7 +302,7 @@
       <div class="text-center mb-5">
         <span class="section-subtitle">Our Quality Commitment</span>
         <h2 class="section-title">Why Guests Love Dining With Us</h2>
-        <p class="section-desc">From our authentic spice grinders to our open charcoal hearths, we don't cut corners on traditional recipes.</p>
+        <p class="section-desc">From our traditional spice blends to our open charcoal hearths, we stay true to authentic recipes and quality ingredients.</p>
       </div>
 
       <div class="row g-4">
@@ -349,92 +353,59 @@
       </div>
 
       <div class="row g-4">
-        <!-- Item 1 -->
+        <!-- Item 1: Saj Shawarma Wrap -->
         <div class="col-md-6 col-lg-4">
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/food/hummus-plate.svg';" alt="Artisanal Creamy Hummus">
-              <span class="food-card-price-badge">₹8.99</span>
-            </div>
-            <div class="food-card-body">
-              <span class="badge-dietary badge-vegan">Vegan</span>
-              <h4 class="food-card-title mt-2"><a href="menu-item.html">Artisanal Creamy Hummus</a></h4>
-              <p class="food-card-desc">Whipped chickpeas, tahini, lemon juice, topped with extra virgin olive oil and paprika.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="food-card">
-            <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/food/falafel-platter.svg';" alt="Crispy Herb Falafel Platter">
-              <span class="food-card-price-badge">₹10.49</span>
-            </div>
-            <div class="food-card-body">
-              <span class="badge-dietary badge-vegan">Vegan</span>
-              <h4 class="food-card-title mt-2"><a href="menu-item.html">Crispy Herb Falafel Platter</a></h4>
-              <p class="food-card-desc">Golden crisp fava &amp; chickpea patties with coriander, cumin, tarator sesame sauce.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="food-card">
-            <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/food/lamb-kebab.svg';" alt="Charcoal Lamb Kebabs">
-              <span class="food-card-price-badge">₹22.99</span>
+              <img src="assets/images/food/saj-shawarma-wrap.jpg" onerror="this.onerror=null; this.src='assets/images/food/chicken-shawarma.svg';" alt="Saj Shawarma Wrap">
             </div>
             <div class="food-card-body">
               <span class="badge-dietary badge-halal">Halal</span>
-              <h4 class="food-card-title mt-2"><a href="menu-item.html">Charcoal Lamb Kebabs</a></h4>
-              <p class="food-card-desc">Hand-minced spiced lamb skewers grilled over charcoal with sumac onions.</p>
+              <h4 class="food-card-title mt-2"><a href="menu-item.html?dish=saj-shawarma-wrap">Saj Shawarma Wrap</a></h4>
+              <p class="food-card-desc">Freshly prepared saj wrap filled with shaved chicken or beef shawarma, with pickles and garlic sauce.</p>
+              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-nowrap">
+                <span class="food-card-bottom-price">₹10.49</span>
+                <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="saj-shawarma-wrap" data-name="Saj Shawarma Wrap" data-price="10.49" data-img="assets/images/food/saj-shawarma-wrap.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
+                <a href="menu-item.html?dish=saj-shawarma-wrap" class="btn btn-outline-spice btn-sm">Details</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Item 4 -->
+        <!-- Item 2: Artisanal Creamy Hummus -->
         <div class="col-md-6 col-lg-4">
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/food/shish-taook.svg';" alt="Saffron Shish Taook">
-              <span class="food-card-price-badge">₹19.99</span>
-            </div>
-            <div class="food-card-body">
-              <span class="badge-dietary badge-halal">Halal</span>
-              <h4 class="food-card-title mt-2"><a href="menu-item.html">Saffron Shish Taook Skewers</a></h4>
-              <p class="food-card-desc">Tender chicken breast marinated in yogurt, garlic, lemon, and saffron spices.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="food-card">
-            <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/food/fattoush-salad.svg';" alt="Garden Fresh Fattoush Salad">
-              <span class="food-card-price-badge">₹11.99</span>
+              <img src="assets/images/food/artisanal-creamy-hummus.jpg" onerror="this.onerror=null; this.src='assets/images/food/hummus-plate.svg';" alt="Artisanal Creamy Hummus">
             </div>
             <div class="food-card-body">
               <span class="badge-dietary badge-vegan">Vegan</span>
-              <h4 class="food-card-title mt-2"><a href="menu-item.html">Garden Fresh Fattoush Salad</a></h4>
-              <p class="food-card-desc">Radishes, cucumbers, cherry tomatoes, mint, sumac vinaigrette, toasted pita chips.</p>
+              <h4 class="food-card-title mt-2"><a href="menu-item.html?dish=artisanal-creamy-hummus">Artisanal Creamy Hummus</a></h4>
+              <p class="food-card-desc">Smooth, velvety chickpea hummus topped with whole chickpeas, extra-virgin olive oil, and paprika.</p>
+              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-nowrap">
+                <span class="food-card-bottom-price">₹8.99</span>
+                <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="artisanal-creamy-hummus" data-name="Artisanal Creamy Hummus" data-price="8.99" data-img="assets/images/food/artisanal-creamy-hummus.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
+                <a href="menu-item.html?dish=artisanal-creamy-hummus" class="btn btn-outline-spice btn-sm">Details</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Item 6 -->
+        <!-- Item 3: Charcoal Lamb Kebabs -->
         <div class="col-md-6 col-lg-4">
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/food/kunafa.svg';" alt="Hot Cheese Kunafa">
-              <span class="food-card-price-badge">₹9.49</span>
+              <img src="assets/images/food/charcoal-lamb-kebabs.jpg" onerror="this.onerror=null; this.src='assets/images/food/lamb-kebab.svg';" alt="Charcoal Lamb Kebabs">
             </div>
             <div class="food-card-body">
-              <span class="badge-dietary badge-gf">Vegetarian</span>
-              <h4 class="food-card-title mt-2"><a href="menu-item.html">Hot Nabulsi Kunafa</a></h4>
-              <p class="food-card-desc">Warm crispy shredded pastry with stretchy cheese, orange blossom syrup, pistachios.</p>
+              <span class="badge-dietary badge-halal">Halal</span>
+              <h4 class="food-card-title mt-2"><a href="menu-item.html?dish=charcoal-lamb-kebabs">Charcoal Lamb Kebabs</a></h4>
+              <p class="food-card-desc">Seasoned lamb kebab skewers freshly grilled over charcoal, served with flatbread and sumac onions.</p>
+              <div class="food-card-footer d-flex align-items-center justify-content-between gap-2 flex-nowrap">
+                <span class="food-card-bottom-price">₹22.99</span>
+                <button class="btn btn-spice btn-sm add-to-cart-btn d-inline-flex align-items-center" data-id="charcoal-lamb-kebabs" data-name="Charcoal Lamb Kebabs" data-price="22.99" data-img="assets/images/food/charcoal-lamb-kebabs.jpg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><span>Add to Cart</span></button>
+                <a href="menu-item.html?dish=charcoal-lamb-kebabs" class="btn btn-outline-spice btn-sm">Details</a>
+              </div>
             </div>
           </div>
         </div>
@@ -445,9 +416,9 @@
   <!-- From Our Grill Section -->
   <section class="py-5">
     <div class="container py-4">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null; this.src='assets/images/home-2/charcoal-grill.svg';" alt="Sizzling Charcoal Barbecue Skewers" class="img-fluid rounded-4 shadow-lg border border-danger">
+          <img src="assets/images/food/sultan-mixed-grill-platter.jpg" onerror="this.onerror=null; this.src='assets/images/home-2/charcoal-grill.svg';" alt="Sultan Mixed Grill Feast Platter with Lamb Kebabs, Shish Taook, Flame-Seared Meats, Cardamom Rice, Grilled Tomatoes, and Sumac Onions" class="img-fluid rounded-4 shadow-lg border border-danger">
         </div>
         <div class="col-lg-6">
           <span class="section-subtitle">Live Charcoal Cooking</span>
@@ -463,16 +434,16 @@
   <!-- Restaurant Story Preview Section -->
   <section class="py-5 bg-surface-alt">
     <div class="container py-4">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-lg-6">
           <span class="section-subtitle">Since 1998</span>
           <h2 class="section-title">Generations of Culinary Heritage</h2>
-          <p class="lead">What started as a small family spice stall in Aleppo over two decades ago has grown into a beloved dining landmark.</p>
+          <p class="lead">What began as a small family spice stall in Aleppo nearly three decades ago has grown into a beloved Middle Eastern dining destination.</p>
           <p class="text-muted">We take pride in preparing every single item from scratch—from hand-stretching saj flatbreads to emulsifying fresh garlic toum hourly.</p>
           <a href="about.html" class="btn btn-spice">Read Our Full Story</a>
         </div>
         <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null; this.src='assets/images/home-1/story-kitchen.svg';" alt="Chef preparing fresh food in kitchen" class="img-fluid rounded-4 shadow-lg border border-warning">
+          <img src="assets/images/home-1/generations-culinary-heritage.jpg" onerror="this.onerror=null; this.src='assets/images/home-1/story-kitchen.svg';" alt="Multi-generation Levantine family preparing traditional food together in an authentic open kitchen" class="img-fluid rounded-4 shadow-lg border border-warning w-100" style="object-fit: cover;">
         </div>
       </div>
     </div>
@@ -537,7 +508,7 @@
     <div class="container py-4">
       <h2 class="display-5 font-heading text-white mb-3">Planning an Event or Family Gathering?</h2>
       <p class="lead max-w-600 mx-auto mb-4 opacity-90">Let us cater your special occasion with live charcoal stations, extravagant meze platters, and authentic hospitality.</p>
-      <div class="d-flex justify-content-center gap-3">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
         <a href="catering.html" class="btn btn-gold btn-lg">Explore Catering Packages</a>
         <a href="contact.html" class="btn btn-outline-gold btn-lg text-white border-white">Contact Our Event Team</a>
       </div>
@@ -560,7 +531,7 @@
         <div class="col-md-4">
           <div class="blog-card">
             <div class="blog-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/blog/shawarma-spice-guide.svg';" alt="The 7 Essential Shawarma Spices">
+              <img src="assets/images/blog/home-story-shawarma-spices.jpg" onerror="this.onerror=null; this.src='assets/images/blog/shawarma-spice-guide.svg';" alt="The 7 Essential Shawarma Spices">
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -576,7 +547,7 @@
         <div class="col-md-4">
           <div class="blog-card">
             <div class="blog-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/blog/charcoal-grilling-secrets.svg';" alt="Secrets to Oak Charcoal Grilling">
+              <img src="assets/images/blog/home-story-oak-charcoal-grill.jpg" onerror="this.onerror=null; this.src='assets/images/blog/charcoal-grilling-secrets.svg';" alt="Secrets to Oak Charcoal Grilling">
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -592,7 +563,7 @@
         <div class="col-md-4">
           <div class="blog-card">
             <div class="blog-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null; this.src='assets/images/blog/middle-eastern-hospitality.svg';" alt="Art of Middle Eastern Hospitality">
+              <img src="assets/images/blog/home-story-levant-hospitality.jpg" onerror="this.onerror=null; this.src='assets/images/blog/middle-eastern-hospitality.svg';" alt="The Art of Levant Hospitality">
             </div>
             <div class="blog-card-body">
               <div class="blog-meta">
@@ -612,7 +583,7 @@
     <div class="container text-center">
       <h2 class="display-6 font-heading mb-3">Visit Us or Order Delivery Today</h2>
       <p class="lead text-muted max-w-600 mx-auto mb-4">📍 124 Spice Market Way, Foodville, CA &nbsp;|&nbsp; 📞 (800) 555-0199 &nbsp;|&nbsp; Open Daily 11 AM - 11 PM</p>
-      <div class="d-flex justify-content-center gap-3">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
         <a href="menu.html" class="btn btn-spice btn-lg">Order Online Now</a>
         <a href="contact.html" class="btn btn-outline-gold btn-lg">Get Map Directions</a>
       </div>
